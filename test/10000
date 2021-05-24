@@ -1,0 +1,5 @@
+Script started on Thu 11 Jun 2020 10:13:37 AM UTC
+Usage: ./NN <NUM> [-v]
+where NUM is the number of images to process in parallel (up to 10000 for the t10k-images-idx3-ubyte database file) and -v is used to display approximately what each image looks like.
+
+Script done on Thu 11 Jun 2020 10:13:37 AM UTC

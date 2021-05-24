@@ -1,0 +1,105 @@
+
+
+.section .strtab	STRTAB
+
+.section .shstrtab	STRTAB
+
+.section .symtab	SYMTAB
+ index           value           size      info    other  shndx    name  
+   0               0               0        0        0      0     (null)
+   1               0               0        3        0      1     .shstrtab
+   2               0               0        3        0      2     .strtab
+   3               0               0        3        0      3     .symtab
+   4               0               0        3        0      0     
+   5               0               0        3        0      0     
+   6               0             584        3        0      4     .text._Z13scalarProdGPUPfS_S_ii
+   7               0               0        3        0      6     .nv.info._Z13scalarProdGPUPfS_S_ii
+   8               0               0        3        0      7     .nv.shared._Z13scalarProdGPUPfS_S_ii
+   9               0               0        3        0      5     .nv.constant1._Z13scalarProdGPUPfS_S_ii
+  10               0               0       12       10      4     _Z13scalarProdGPUPfS_S_ii
+
+
+.nv.constant1._Z13scalarProdGPUPfS_S_ii	PROGBITS
+0x000003ff  
+
+
+.nv.shared._Z13scalarProdGPUPfS_S_ii	NOBITS
+   No data to be dumped. 
+
+
+.text._Z13scalarProdGPUPfS_S_ii	PROGBITS
+bar = 1	reg = 15	lmem=0	smem=4144
+0xa0004c09  0x04200780  0x3002d5fd  0x6c20c7c8  
+0x30000003  0x00000280  0xa000000d  0x04000780  
+0xa0004811  0x04200780  0x308007fd  0x6c40c7c8  
+0x307c07fd  0x640087d8  0xa0028003  0x00000000  
+0x10028003  0x00000100  0x1000d605  0x0423c780  
+0xa0004215  0x04200780  0x6002d601  0x8020c780  
+0x30020625  0xc4100780  0x6102d619  0x80600780  
+0x6002d621  0x80204780  0x30020a1d  0xc4100780  
+0x20309225  0x00000003  0x300011fd  0x6c00c7e8  
+0xa0022003  0x00000000  0x10000005  0x0403c780  
+0x10021003  0x00002280  0x30020029  0xc4100780  
+0x1000f831  0x0403c780  0x210aec2c  0x210af028  
+0xd00e1639  0x80c00780  0xd00e1435  0x80c00780  
+0xe00d1c31  0x00030780  0x20008205  0x00000043  
+0x300111fd  0x6c0107e8  0x20009429  0x00000103  
+0x2000962d  0x00000103  0x10018003  0x00002280  
+0x10022003  0x00000780  0x1000f831  0x0403c780  
+0x20000001  0x04014782  0x00001205  0xc0000780  
+0x300601fd  0x6c00c7e8  0x04000001  0xe4230780  
+0x20001225  0x0401c780  0x10011003  0x00002280  
+0xf0000001  0xe0000002  0x10008005  0x00000023  
+0x861ffe03  0x00000000  0x300107fd  0x6c0187e8  
+0xa003e003  0x00000000  0x1003e003  0x00002280  
+0x20000625  0x04004780  0xa0004221  0x04200780  
+0x30020615  0xc4100780  0x30021201  0xc4100780  
+0x20000229  0x04004780  0x3002101d  0xc4100780  
+0x20308a19  0x00000003  0x20308015  0x00000003  
+0x00000a09  0xc0000780  0x00000c05  0xc0000780  
+0x1900e000  0x20089224  0xb400c001  0x00200780  
+0x300a13fd  0x6c0047e8  0x04000001  0xe4200780  
+0x20058e14  0x20078c18  0x10036003  0x00002280  
+0x30010205  0xec100782  0x307c03fd  0x6c0107e8  
+0x1002a003  0x00002280  0x30020405  0xc4101680  
+0x1000d801  0x0423d680  0x2000c805  0x04205680  
+0xd00e0201  0xa0c01680  0x20000409  0x04010780  
+0x3002d5fd  0x6c2107e8  0x10007003  0x00002280  
+0xf0000001  0xe0000001  
+
+
+.nv.info._Z13scalarProdGPUPfS_S_ii	PROGBITS
+	<0x1>
+	Attribute:	EIATTR_SMEM_PARAM_SIZE
+	Format:	EIFMT_HVAL
+	Value:	0x20
+	<0x2>
+	Attribute:	EIATTR_KPARAM_INFO
+	Format:	EIFMT_SVAL
+	Value:	Index : 0x0	Ordinal : 0x4	Offset  : 0x1c	Size    : 0x4
+		Pointee's logAlignment : 0x0	Space : 0x0	cbank : 0x1f	Parameter Space : SMEM	
+	<0x3>
+	Attribute:	EIATTR_KPARAM_INFO
+	Format:	EIFMT_SVAL
+	Value:	Index : 0x0	Ordinal : 0x3	Offset  : 0x18	Size    : 0x4
+		Pointee's logAlignment : 0x0	Space : 0x0	cbank : 0x1f	Parameter Space : SMEM	
+	<0x4>
+	Attribute:	EIATTR_KPARAM_INFO
+	Format:	EIFMT_SVAL
+	Value:	Index : 0x0	Ordinal : 0x2	Offset  : 0x10	Size    : 0x8
+		Pointee's logAlignment : 0x0	Space : 0x0	cbank : 0x1f	Parameter Space : SMEM	
+	<0x5>
+	Attribute:	EIATTR_KPARAM_INFO
+	Format:	EIFMT_SVAL
+	Value:	Index : 0x0	Ordinal : 0x1	Offset  : 0x8	Size    : 0x8
+		Pointee's logAlignment : 0x0	Space : 0x0	cbank : 0x1f	Parameter Space : SMEM	
+	<0x6>
+	Attribute:	EIATTR_KPARAM_INFO
+	Format:	EIFMT_SVAL
+	Value:	Index : 0x0	Ordinal : 0x0	Offset  : 0x0	Size    : 0x8
+		Pointee's logAlignment : 0x0	Space : 0x0	cbank : 0x1f	Parameter Space : SMEM	
+	<0x7>
+	Attribute:	EIATTR_SYNC_STACK
+	Format:	EIFMT_SVAL
+	Value:	0x220110 0x20 
+

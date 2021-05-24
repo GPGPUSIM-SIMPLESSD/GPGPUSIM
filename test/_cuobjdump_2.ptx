@@ -1,0 +1,174 @@
+
+
+
+
+
+
+
+.version 3.0
+.target sm_30
+.address_size 64
+
+.file	1 "/tmp/tmpxft_00011dfe_00000000-15_scalarProd.compute_30.cpp3.i"
+.file	2 "scalarProd_kernel.cu"
+.file	3 "/usr/local/cuda/nvvm/ci_include.h"
+
+
+.entry _Z13scalarProdGPUPfS_S_ii(
+.param .u64 _Z13scalarProdGPUPfS_S_ii_param_0,
+.param .u64 _Z13scalarProdGPUPfS_S_ii_param_1,
+.param .u64 _Z13scalarProdGPUPfS_S_ii_param_2,
+.param .u32 _Z13scalarProdGPUPfS_S_ii_param_3,
+.param .u32 _Z13scalarProdGPUPfS_S_ii_param_4
+)
+{
+.reg .f32 %f<13>;
+.reg .pred %p<11>;
+.reg .s32 %r<42>;
+.reg .s64 %rl<21>;
+
+	.shared .align 4 .b8 __cuda_local_var_40919_35_non_const_accumResult[4096];
+
+ld.param.u64 %rl4, [_Z13scalarProdGPUPfS_S_ii_param_1];
+ld.param.u64 %rl5, [_Z13scalarProdGPUPfS_S_ii_param_2];
+ld.param.u32 %r1, [_Z13scalarProdGPUPfS_S_ii_param_3];
+cvta.to.global.u64 %rl2, %rl5;
+cvta.to.global.u64 %rl3, %rl4;
+.loc 2 49 1
+mov.u32 %r35, %ctaid.x;
+.loc 2 49 1
+setp.ge.s32 %p2, %r35, %r1;
+@%p2 bra BB0_17;
+
+.loc 2 59 1
+mov.u32 %r4, %tid.x;
+.loc 2 59 25
+mov.u32 %r5, %ntid.x;
+.loc 2 78 1
+setp.eq.s32 %p1, %r4, 0;
+
+BB0_2:
+ld.param.u32 %r34, [_Z13scalarProdGPUPfS_S_ii_param_4];
+.loc 3 294 5
+mul24.lo.s32 %r7, %r34, %r35;
+.loc 2 51 1
+add.s32 %r8, %r7, %r34;
+.loc 2 59 1
+mov.u32 %r22, %tid.x;
+.loc 2 59 1
+setp.gt.s32 %p3, %r22, 1023;
+@%p3 bra BB0_9;
+
+mov.u32 %r41, %r4;
+
+BB0_4:
+.loc 2 62 1
+add.s32 %r36, %r41, %r7;
+.loc 2 62 1
+setp.lt.s32 %p4, %r36, %r8;
+@%p4 bra BB0_6;
+
+mov.f32 %f12, 0f00000000;
+bra.uni BB0_8;
+
+BB0_6:
+mov.f32 %f12, 0f00000000;
+
+BB0_7:
+.loc 2 63 1
+mul.wide.s32 %rl6, %r36, 4;
+add.s64 %rl7, %rl3, %rl6;
+add.s64 %rl8, %rl2, %rl6;
+ld.global.f32 %f6, [%rl8];
+ld.global.f32 %f7, [%rl7];
+fma.rn.f32 %f12, %f7, %f6, %f12;
+.loc 2 62 63
+add.s32 %r36, %r36, 1024;
+.loc 2 62 1
+setp.lt.s32 %p5, %r36, %r8;
+@%p5 bra BB0_7;
+
+BB0_8:
+mul.wide.s32 %rl9, %r41, 4;
+mov.u64 %rl10, __cuda_local_var_40919_35_non_const_accumResult;
+add.s64 %rl11, %rl10, %rl9;
+.loc 2 65 1
+st.shared.f32 [%rl11], %f12;
+.loc 2 59 25
+add.s32 %r41, %r5, %r41;
+.loc 2 59 1
+setp.lt.s32 %p6, %r41, 1024;
+@%p6 bra BB0_4;
+
+BB0_9:
+mov.u32 %r38, 512;
+mov.u32 %r37, 0;
+
+BB0_10:
+.loc 2 73 1
+bar.sync 0;
+.loc 2 74 1
+setp.ge.s32 %p7, %r4, %r38;
+@%p7 bra BB0_13;
+
+mov.u32 %r40, %r4;
+
+BB0_12:
+mov.u32 %r16, %r40;
+.loc 2 75 1
+add.s32 %r28, %r16, %r38;
+mul.wide.s32 %rl12, %r28, 4;
+mov.u64 %rl13, __cuda_local_var_40919_35_non_const_accumResult;
+add.s64 %rl14, %rl13, %rl12;
+mul.wide.s32 %rl15, %r16, 4;
+add.s64 %rl16, %rl13, %rl15;
+.loc 2 75 1
+ld.shared.f32 %f8, [%rl16];
+ld.shared.f32 %f9, [%rl14];
+add.f32 %f10, %f8, %f9;
+st.shared.f32 [%rl16], %f10;
+.loc 2 74 27
+add.s32 %r17, %r5, %r16;
+.loc 2 74 1
+setp.lt.s32 %p8, %r17, %r38;
+mov.u32 %r40, %r17;
+.loc 2 74 1
+@%p8 bra BB0_12;
+
+BB0_13:
+.loc 2 72 22
+shr.s32 %r38, %r38, 1;
+add.s32 %r37, %r37, 1;
+.loc 2 49 25
+mov.u32 %r20, %nctaid.x;
+.loc 2 72 1
+setp.ne.s32 %p9, %r37, 10;
+@%p9 bra BB0_10;
+
+.loc 2 78 1
+@!%p1 bra BB0_16;
+
+.loc 2 78 1
+ld.shared.f32 %f11, [__cuda_local_var_40919_35_non_const_accumResult];
+ld.param.u64 %rl20, [_Z13scalarProdGPUPfS_S_ii_param_0];
+cvta.to.global.u64 %rl17, %rl20;
+.loc 2 78 1
+mul.wide.s32 %rl18, %r35, 4;
+add.s64 %rl19, %rl17, %rl18;
+st.global.f32 [%rl19], %f11;
+
+BB0_16:
+.loc 2 49 25
+add.s32 %r35, %r20, %r35;
+ld.param.u32 %r33, [_Z13scalarProdGPUPfS_S_ii_param_3];
+.loc 2 49 1
+setp.lt.s32 %p10, %r35, %r33;
+@%p10 bra BB0_2;
+
+BB0_17:
+.loc 2 80 2
+ret;
+}
+
+
+

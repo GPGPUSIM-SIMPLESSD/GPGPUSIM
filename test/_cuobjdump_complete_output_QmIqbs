@@ -1,0 +1,1288 @@
+
+Fatbin elf code:
+================
+arch = sm_10
+code version = [1,2]
+producer = cuda
+host = linux
+compile_size = 64bit
+identifier = scalarProd.cu
+
+.section .strtab	STRTAB
+
+.section .shstrtab	STRTAB
+
+.section .symtab	SYMTAB
+ index           value           size      info    other  shndx    name  
+   0               0               0        0        0      0     (null)
+   1               0               0        3        0      1     .shstrtab
+   2               0               0        3        0      2     .strtab
+   3               0               0        3        0      3     .symtab
+   4               0               0        3        0      0     
+   5               0               0        3        0      0     
+   6               0             584        3        0      4     .text._Z13scalarProdGPUPfS_S_ii
+   7               0               0        3        0      6     .nv.info._Z13scalarProdGPUPfS_S_ii
+   8               0               0        3        0      7     .nv.shared._Z13scalarProdGPUPfS_S_ii
+   9               0               0        3        0      5     .nv.constant1._Z13scalarProdGPUPfS_S_ii
+  10               0               0       12       10      4     _Z13scalarProdGPUPfS_S_ii
+
+
+.nv.constant1._Z13scalarProdGPUPfS_S_ii	PROGBITS
+0x000003ff  
+
+
+.nv.shared._Z13scalarProdGPUPfS_S_ii	NOBITS
+   No data to be dumped. 
+
+
+.text._Z13scalarProdGPUPfS_S_ii	PROGBITS
+bar = 1	reg = 15	lmem=0	smem=4144
+0xa0004c09  0x04200780  0x3002d5fd  0x6c20c7c8  
+0x30000003  0x00000280  0xa000000d  0x04000780  
+0xa0004811  0x04200780  0x308007fd  0x6c40c7c8  
+0x307c07fd  0x640087d8  0xa0028003  0x00000000  
+0x10028003  0x00000100  0x1000d605  0x0423c780  
+0xa0004215  0x04200780  0x6002d601  0x8020c780  
+0x30020625  0xc4100780  0x6102d619  0x80600780  
+0x6002d621  0x80204780  0x30020a1d  0xc4100780  
+0x20309225  0x00000003  0x300011fd  0x6c00c7e8  
+0xa0022003  0x00000000  0x10000005  0x0403c780  
+0x10021003  0x00002280  0x30020029  0xc4100780  
+0x1000f831  0x0403c780  0x210aec2c  0x210af028  
+0xd00e1639  0x80c00780  0xd00e1435  0x80c00780  
+0xe00d1c31  0x00030780  0x20008205  0x00000043  
+0x300111fd  0x6c0107e8  0x20009429  0x00000103  
+0x2000962d  0x00000103  0x10018003  0x00002280  
+0x10022003  0x00000780  0x1000f831  0x0403c780  
+0x20000001  0x04014782  0x00001205  0xc0000780  
+0x300601fd  0x6c00c7e8  0x04000001  0xe4230780  
+0x20001225  0x0401c780  0x10011003  0x00002280  
+0xf0000001  0xe0000002  0x10008005  0x00000023  
+0x861ffe03  0x00000000  0x300107fd  0x6c0187e8  
+0xa003e003  0x00000000  0x1003e003  0x00002280  
+0x20000625  0x04004780  0xa0004221  0x04200780  
+0x30020615  0xc4100780  0x30021201  0xc4100780  
+0x20000229  0x04004780  0x3002101d  0xc4100780  
+0x20308a19  0x00000003  0x20308015  0x00000003  
+0x00000a09  0xc0000780  0x00000c05  0xc0000780  
+0x1900e000  0x20089224  0xb400c001  0x00200780  
+0x300a13fd  0x6c0047e8  0x04000001  0xe4200780  
+0x20058e14  0x20078c18  0x10036003  0x00002280  
+0x30010205  0xec100782  0x307c03fd  0x6c0107e8  
+0x1002a003  0x00002280  0x30020405  0xc4101680  
+0x1000d801  0x0423d680  0x2000c805  0x04205680  
+0xd00e0201  0xa0c01680  0x20000409  0x04010780  
+0x3002d5fd  0x6c2107e8  0x10007003  0x00002280  
+0xf0000001  0xe0000001  
+
+
+.nv.info._Z13scalarProdGPUPfS_S_ii	PROGBITS
+	<0x1>
+	Attribute:	EIATTR_SMEM_PARAM_SIZE
+	Format:	EIFMT_HVAL
+	Value:	0x20
+	<0x2>
+	Attribute:	EIATTR_KPARAM_INFO
+	Format:	EIFMT_SVAL
+	Value:	Index : 0x0	Ordinal : 0x4	Offset  : 0x1c	Size    : 0x4
+		Pointee's logAlignment : 0x0	Space : 0x0	cbank : 0x1f	Parameter Space : SMEM	
+	<0x3>
+	Attribute:	EIATTR_KPARAM_INFO
+	Format:	EIFMT_SVAL
+	Value:	Index : 0x0	Ordinal : 0x3	Offset  : 0x18	Size    : 0x4
+		Pointee's logAlignment : 0x0	Space : 0x0	cbank : 0x1f	Parameter Space : SMEM	
+	<0x4>
+	Attribute:	EIATTR_KPARAM_INFO
+	Format:	EIFMT_SVAL
+	Value:	Index : 0x0	Ordinal : 0x2	Offset  : 0x10	Size    : 0x8
+		Pointee's logAlignment : 0x0	Space : 0x0	cbank : 0x1f	Parameter Space : SMEM	
+	<0x5>
+	Attribute:	EIATTR_KPARAM_INFO
+	Format:	EIFMT_SVAL
+	Value:	Index : 0x0	Ordinal : 0x1	Offset  : 0x8	Size    : 0x8
+		Pointee's logAlignment : 0x0	Space : 0x0	cbank : 0x1f	Parameter Space : SMEM	
+	<0x6>
+	Attribute:	EIATTR_KPARAM_INFO
+	Format:	EIFMT_SVAL
+	Value:	Index : 0x0	Ordinal : 0x0	Offset  : 0x0	Size    : 0x8
+		Pointee's logAlignment : 0x0	Space : 0x0	cbank : 0x1f	Parameter Space : SMEM	
+	<0x7>
+	Attribute:	EIATTR_SYNC_STACK
+	Format:	EIFMT_SVAL
+	Value:	0x220110 0x20 
+
+	code for sm_10
+		Function : _Z13scalarProdGPUPfS_S_ii
+	/*0000*/     /*0xa0004c0904200780*/ 	I2I.U32.U16 R2, g [0x6].U16;
+	/*0008*/     /*0x3002d5fd6c20c7c8*/ 	ISET.S32.C0 o [0x7f], g [0xa], R2, LE;
+	/*0010*/     /*0x3000000300000280*/ 	RET C0.NE;
+	/*0018*/     /*0xa000000d04000780*/ 	I2I.U32.U16 R3, R0L;
+	/*0020*/     /*0xa000481104200780*/ 	I2I.U32.U16 R4, g [0x4].U16;
+	/*0028*/     /*0x308007fd6c40c7c8*/ 	ISET.S32.C0 o [0x7f], R3, c [0x1] [0x0], LE;
+	/*0030*/     /*0x307c07fd640087d8*/ 	ISET.C1 o [0x7f], R3, R124, EQ;
+	/*0038*/     /*0xa002800300000000*/ 	SSY 0x140;
+	/*0040*/     /*0x1002800300000100*/ 	BRA C0.EQ, 0x140;
+	/*0048*/     /*0x1000d6050423c780*/ 	MOV R1, g [0xb];
+	/*0050*/     /*0xa000421504200780*/ 	I2I.U32.U16 R5, g [0x1].U16;
+	/*0058*/     /*0x6002d6018020c780*/ 	IMAD.S24 R0, g [0xb], R2, R3;
+	/*0060*/     /*0x30020625c4100780*/ 	SHL R9, R3, 0x2;
+	/*0068*/     /*0x6102d61980600780*/ 	IMAD.S24 R6, g [0xb], R2, c [0x1] [0x0];
+	/*0070*/     /*0x6002d62180204780*/ 	IMAD.S24 R8, g [0xb], R2, R1;
+	/*0078*/     /*0x30020a1dc4100780*/ 	SHL R7, R5, 0x2;
+	/*0080*/     /*0x2030922500000003*/ 	IADD32I R9, R9, 0x30;
+	/*0088*/     /*0x300011fd6c00c7e8*/ 	ISET.S32.C2 o [0x7f], R8, R0, LE;
+	/*0090*/     /*0xa002200300000000*/ 	SSY 0x110;
+	/*0098*/     /*0x100000050403c780*/ 	MOV R1, R0;
+	/*00a0*/     /*0x1002100300002280*/ 	BRA C2.NE, 0x108;
+	/*00a8*/     /*0x30020029c4100780*/ 	SHL R10, R0, 0x2;
+	/*00b0*/     /*0x1000f8310403c780*/ 	MOV R12, R124;
+	/*00b8*/     /*0x210aec2c        */ 	IADD32 R11, g [0x6], R10;
+	/*00bc*/     /*0x210af028        */ 	IADD32 R10, g [0x8], R10;
+	/*00c0*/     /*0xd00e163980c00780*/ 	GLD.U32 R14, global14 [R11];
+	/*00c8*/     /*0xd00e143580c00780*/ 	GLD.U32 R13, global14 [R10];
+	/*00d0*/     /*0xe00d1c3100030780*/ 	FMAD R12, R14, R13, R12;
+	/*00d8*/     /*0x2000820500000043*/ 	IADD32I R1, R1, 0x400;
+	/*00e0*/     /*0x300111fd6c0107e8*/ 	ISET.S32.C2 o [0x7f], R8, R1, GT;
+	/*00e8*/     /*0x2000942900000103*/ 	IADD32I R10, R10, 0x1000;
+	/*00f0*/     /*0x2000962d00000103*/ 	IADD32I R11, R11, 0x1000;
+	/*00f8*/     /*0x1001800300002280*/ 	BRA C2.NE, 0xc0;
+	/*0100*/     /*0x1002200300000780*/ 	BRA 0x110;
+	/*0108*/     /*0x1000f8310403c780*/ 	MOV R12, R124;
+	/*0110*/     /*0x2000000104014782*/ 	IADD.S R0, R0, R5;
+	/*0118*/     /*0x00001205c0000780*/ 	R2A A1, R9;
+	/*0120*/     /*0x300601fd6c00c7e8*/ 	ISET.S32.C2 o [0x7f], R0, R6, LE;
+	/*0128*/     /*0x04000001e4230780*/ 	R2G.U32.U32 g [A1+0x0], R12;
+	/*0130*/     /*0x200012250401c780*/ 	IADD R9, R9, R7;
+	/*0138*/     /*0x1001100300002280*/ 	BRA C2.NE, 0x88;
+	/*0140*/     /*0xf0000001e0000002*/ 	NOP.S;
+	/*0148*/     /*0x1000800500000023*/ 	MVI R1, 0x200;
+	/*0150*/     /*0x861ffe0300000000*/ 	BAR.ARV.WAIT b0, 0xfff;
+	/*0158*/     /*0x300107fd6c0187e8*/ 	ISET.S32.C2 o [0x7f], R3, R1, GE;
+	/*0160*/     /*0xa003e00300000000*/ 	SSY 0x1f0;
+	/*0168*/     /*0x1003e00300002280*/ 	BRA C2.NE, 0x1f0;
+	/*0170*/     /*0x2000062504004780*/ 	IADD R9, R3, R1;
+	/*0178*/     /*0xa000422104200780*/ 	I2I.U32.U16 R8, g [0x1].U16;
+	/*0180*/     /*0x30020615c4100780*/ 	SHL R5, R3, 0x2;
+	/*0188*/     /*0x30021201c4100780*/ 	SHL R0, R9, 0x2;
+	/*0190*/     /*0x2000022904004780*/ 	IADD R10, R1, R1;
+	/*0198*/     /*0x3002101dc4100780*/ 	SHL R7, R8, 0x2;
+	/*01a0*/     /*0x20308a1900000003*/ 	IADD32I R6, R5, 0x30;
+	/*01a8*/     /*0x2030801500000003*/ 	IADD32I R5, R0, 0x30;
+	/*01b0*/     /*0x00000a09c0000780*/ 	R2A A2, R5;
+	/*01b8*/     /*0x00000c05c0000780*/ 	R2A A1, R6;
+	/*01c0*/     /*0x1900e000        */ 	MOV32 R0, g [A2+0x0];
+	/*01c4*/     /*0x20089224        */ 	IADD32 R9, R9, R8;
+	/*01c8*/     /*0xb400c00100200780*/ 	FADD R0, g [A1+0x0], R0;
+	/*01d0*/     /*0x300a13fd6c0047e8*/ 	ISET.S32.C2 o [0x7f], R9, R10, LT;
+	/*01d8*/     /*0x04000001e4200780*/ 	R2G.U32.U32 g [A1+0x0], R0;
+	/*01e0*/     /*0x20058e14        */ 	IADD32 R5, R7, R5;
+	/*01e4*/     /*0x20078c18        */ 	IADD32 R6, R6, R7;
+	/*01e8*/     /*0x1003600300002280*/ 	BRA C2.NE, 0x1b0;
+	/*01f0*/     /*0x30010205ec100782*/ 	SHR.S.S32 R1, R1, 0x1;
+	/*01f8*/     /*0x307c03fd6c0107e8*/ 	ISET.S32.C2 o [0x7f], R1, R124, GT;
+	/*0200*/     /*0x1002a00300002280*/ 	BRA C2.NE, 0x150;
+	/*0208*/     /*0x30020405c4101680*/ 	SHL R1 (C1.NEU), R2, 0x2;
+	/*0210*/     /*0x1000d8010423d680*/ 	MOV R0 (C1.NEU), g [0xc];
+	/*0218*/     /*0x2000c80504205680*/ 	IADD R1 (C1.NEU), g [0x4], R1;
+	/*0220*/     /*0xd00e0201a0c01680*/ 	GST.U32 global14 [R1] (C1.NEU), R0;
+	/*0228*/     /*0x2000040904010780*/ 	IADD R2, R2, R4;
+	/*0230*/     /*0x3002d5fd6c2107e8*/ 	ISET.S32.C2 o [0x7f], g [0xa], R2, GT;
+	/*0238*/     /*0x1000700300002280*/ 	BRA C2.NE, 0x38;
+	/*0240*/     /*0xf0000001e0000001*/ 	NOP;
+		..........................................
+
+
+
+Fatbin ptx code:
+================
+arch = sm_10
+code version = [1,4]
+producer = cuda
+host = linux
+compile_size = 64bit
+identifier = scalarProd.cu
+	.version 1.4
+.target sm_10, map_f64_to_f32
+
+	
+
+
+	
+	
+
+
+	
+	
+	
+	
+	
+	
+	
+
+.file	1	"<command-line>"
+.file	2	"/tmp/tmpxft_00011dfe_00000000-10_scalarProd.compute_10.cudafe2.gpu"
+.file	3	"/usr/lib/gcc/x86_64-linux-gnu/4.4.7/include/stddef.h"
+.file	4	"/usr/local/cuda/include/crt/device_runtime.h"
+.file	5	"/usr/local/cuda/include/host_defines.h"
+.file	6	"/usr/local/cuda/include/builtin_types.h"
+.file	7	"/usr/local/cuda/include/device_types.h"
+.file	8	"/usr/local/cuda/include/driver_types.h"
+.file	9	"/usr/local/cuda/include/surface_types.h"
+.file	10	"/usr/local/cuda/include/texture_types.h"
+.file	11	"/usr/local/cuda/include/vector_types.h"
+.file	12	"/usr/local/cuda/include/device_launch_parameters.h"
+.file	13	"/usr/local/cuda/include/crt/storage_class.h"
+.file	14	"scalarProd_kernel.cu"
+.file	15	"/usr/local/cuda/include/common_functions.h"
+.file	16	"/usr/local/cuda/include/math_functions.h"
+.file	17	"/usr/local/cuda/include/math_constants.h"
+.file	18	"/usr/local/cuda/include/device_functions.h"
+.file	19	"/usr/local/cuda/include/sm_11_atomic_functions.h"
+.file	20	"/usr/local/cuda/include/sm_12_atomic_functions.h"
+.file	21	"/usr/local/cuda/include/sm_13_double_functions.h"
+.file	22	"/usr/local/cuda/include/sm_20_atomic_functions.h"
+.file	23	"/usr/local/cuda/include/sm_20_intrinsics.h"
+.file	24	"/usr/local/cuda/include/sm_30_intrinsics.h"
+.file	25	"/usr/local/cuda/include/surface_functions.h"
+.file	26	"/usr/local/cuda/include/texture_fetch_functions.h"
+.file	27	"/usr/local/cuda/include/math_functions_dbl_ptx1.h"
+
+
+.entry _Z13scalarProdGPUPfS_S_ii (
+.param .u64 __cudaparm__Z13scalarProdGPUPfS_S_ii_d_C,
+.param .u64 __cudaparm__Z13scalarProdGPUPfS_S_ii_d_A,
+.param .u64 __cudaparm__Z13scalarProdGPUPfS_S_ii_d_B,
+.param .s32 __cudaparm__Z13scalarProdGPUPfS_S_ii_vectorN,
+.param .s32 __cudaparm__Z13scalarProdGPUPfS_S_ii_elementN)
+{
+.reg .u32 %r<30>;
+.reg .u64 %rd<25>;
+.reg .f32 %f<9>;
+.reg .pred %p<12>;
+.shared .align 4 .b8 __cuda___cuda_local_var_40013_35_non_const_accumResult32[4096];
+.loc	14	39	0
+$LDWbegin__Z13scalarProdGPUPfS_S_ii:
+.loc	14	49	0
+cvt.s32.u16 %r1, %ctaid.x;
+mov.s32 %r2, %r1;
+ld.param.s32 %r3, [__cudaparm__Z13scalarProdGPUPfS_S_ii_vectorN];
+setp.le.s32 %p1, %r3, %r1;
+@%p1 bra $Lt_0_6146;
+cvt.s32.u16 %r4, %tid.x;
+mov.s32 %r5, 1023;
+setp.le.s32 %p2, %r4, %r5;
+cvt.u32.u16 %r6, %tid.x;
+mov.u32 %r7, 0;
+setp.eq.u32 %p3, %r6, %r7;
+cvt.u32.u16 %r8, %nctaid.x;
+mov.u64 %rd1, __cuda___cuda_local_var_40013_35_non_const_accumResult32;
+$Lt_0_6658:
+
+	@!%p2 bra $Lt_0_6914;
+ld.param.s32 %r9, [__cudaparm__Z13scalarProdGPUPfS_S_ii_elementN];
+mul24.lo.s32 %r10, %r9, %r2;
+add.s32 %r11, %r10, %r9;
+cvt.s64.s32 %rd2, %r4;
+cvt.u32.u16 %r12, %ntid.x;
+cvt.s64.u32 %rd3, %r12;
+add.s32 %r13, %r10, %r4;
+add.s32 %r14, %r10, 1023;
+mul.wide.s32 %rd4, %r4, 4;
+mul.wide.u32 %rd5, %r12, 4;
+add.u64 %rd6, %rd4, %rd1;
+$Lt_0_7426:
+
+	.loc	14	62	0
+mov.s32 %r15, %r13;
+mov.s32 %r16, %r15;
+setp.le.s32 %p4, %r11, %r15;
+@%p4 bra $Lt_0_12290;
+sub.s32 %r17, %r11, %r15;
+add.s32 %r18, %r17, 1023;
+shr.s32 %r19, %r18, 31;
+mov.s32 %r20, 1023;
+and.b32 %r21, %r19, %r20;
+add.s32 %r22, %r21, %r18;
+shr.s32 %r23, %r22, 10;
+cvt.s64.s32 %rd7, %r15;
+mul.wide.s32 %rd8, %r15, 4;
+ld.param.u64 %rd9, [__cudaparm__Z13scalarProdGPUPfS_S_ii_d_A];
+add.u64 %rd10, %rd9, %rd8;
+ld.param.u64 %rd11, [__cudaparm__Z13scalarProdGPUPfS_S_ii_d_B];
+add.u64 %rd12, %rd11, %rd8;
+mov.f32 %f1, 0f00000000; 
+	mov.s32 %r24, %r23;
+$Lt_0_8194:
+
+	.loc	14	63	0
+ld.global.f32 %f2, [%rd10+0];
+ld.global.f32 %f3, [%rd12+0];
+mad.f32 %f1, %f2, %f3, %f1;
+add.s32 %r16, %r16, 1024;
+add.u64 %rd12, %rd12, 4096;
+add.u64 %rd10, %rd10, 4096;
+setp.gt.s32 %p5, %r11, %r16;
+@%p5 bra $Lt_0_8194;
+bra.uni $Lt_0_7682;
+$Lt_0_12290:
+mov.f32 %f1, 0f00000000; 
+$Lt_0_7682:
+.loc	14	65	0
+st.shared.f32 [%rd6+0], %f1;
+add.s32 %r13, %r15, %r12;
+add.u64 %rd6, %rd6, %rd5;
+setp.le.s32 %p6, %r13, %r14;
+@%p6 bra $Lt_0_7426;
+$Lt_0_6914:
+mov.s32 %r25, 512;
+$Lt_0_9474:
+
+	.loc	14	73	0
+bar.sync 0;
+setp.ge.s32 %p7, %r4, %r25;
+@%p7 bra $Lt_0_9730;
+cvt.s64.s32 %rd13, %r4;
+cvt.u32.u16 %r12, %ntid.x;
+cvt.s64.u32 %rd14, %r12;
+add.s32 %r26, %r4, %r25;
+add.s32 %r27, %r25, %r25;
+mul.wide.s32 %rd15, %r4, 4;
+mul.wide.u32 %rd5, %r12, 4;
+add.u64 %rd16, %rd15, %rd1;
+cvt.s64.s32 %rd17, %r26;
+mul.wide.s32 %rd18, %r26, 4;
+add.u64 %rd19, %rd1, %rd18;
+$Lt_0_10242:
+
+	.loc	14	75	0
+ld.shared.f32 %f4, [%rd16+0];
+ld.shared.f32 %f5, [%rd19+0];
+add.f32 %f6, %f4, %f5;
+st.shared.f32 [%rd16+0], %f6;
+add.s32 %r26, %r26, %r12;
+add.u64 %rd19, %rd19, %rd5;
+add.u64 %rd16, %rd16, %rd5;
+setp.lt.s32 %p8, %r26, %r27;
+@%p8 bra $Lt_0_10242;
+$Lt_0_9730:
+.loc	14	72	0
+shr.s32 %r25, %r25, 1;
+mov.u32 %r28, 0;
+setp.gt.s32 %p9, %r25, %r28;
+@%p9 bra $Lt_0_9474;
+@!%p3 bra $Lt_0_11010;
+.loc	14	78	0
+ld.shared.f32 %f7, [__cuda___cuda_local_var_40013_35_non_const_accumResult32+0];
+ld.param.u64 %rd20, [__cudaparm__Z13scalarProdGPUPfS_S_ii_d_C];
+cvt.s64.s32 %rd21, %r2;
+mul.wide.s32 %rd22, %r2, 4;
+add.u64 %rd23, %rd20, %rd22;
+st.global.f32 [%rd23+0], %f7;
+$Lt_0_11010:
+add.u32 %r2, %r2, %r8;
+setp.lt.s32 %p10, %r2, %r3;
+@%p10 bra $Lt_0_6658;
+$Lt_0_6146:
+.loc	14	80	0
+exit;
+$LDWend__Z13scalarProdGPUPfS_S_ii:
+} 
+
+
+Fatbin ptx code:
+================
+arch = sm_30
+code version = [3,0]
+producer = cuda
+host = linux
+compile_size = 64bit
+identifier = scalarProd.cu
+
+
+
+
+
+
+.version 3.0
+.target sm_30
+.address_size 64
+
+.file	1 "/tmp/tmpxft_00011dfe_00000000-15_scalarProd.compute_30.cpp3.i"
+.file	2 "scalarProd_kernel.cu"
+.file	3 "/usr/local/cuda/nvvm/ci_include.h"
+
+
+.entry _Z13scalarProdGPUPfS_S_ii(
+.param .u64 _Z13scalarProdGPUPfS_S_ii_param_0,
+.param .u64 _Z13scalarProdGPUPfS_S_ii_param_1,
+.param .u64 _Z13scalarProdGPUPfS_S_ii_param_2,
+.param .u32 _Z13scalarProdGPUPfS_S_ii_param_3,
+.param .u32 _Z13scalarProdGPUPfS_S_ii_param_4
+)
+{
+.reg .f32 %f<13>;
+.reg .pred %p<11>;
+.reg .s32 %r<42>;
+.reg .s64 %rl<21>;
+
+	.shared .align 4 .b8 __cuda_local_var_40919_35_non_const_accumResult[4096];
+
+ld.param.u64 %rl4, [_Z13scalarProdGPUPfS_S_ii_param_1];
+ld.param.u64 %rl5, [_Z13scalarProdGPUPfS_S_ii_param_2];
+ld.param.u32 %r1, [_Z13scalarProdGPUPfS_S_ii_param_3];
+cvta.to.global.u64 %rl2, %rl5;
+cvta.to.global.u64 %rl3, %rl4;
+.loc 2 49 1
+mov.u32 %r35, %ctaid.x;
+.loc 2 49 1
+setp.ge.s32 %p2, %r35, %r1;
+@%p2 bra BB0_17;
+
+.loc 2 59 1
+mov.u32 %r4, %tid.x;
+.loc 2 59 25
+mov.u32 %r5, %ntid.x;
+.loc 2 78 1
+setp.eq.s32 %p1, %r4, 0;
+
+BB0_2:
+ld.param.u32 %r34, [_Z13scalarProdGPUPfS_S_ii_param_4];
+.loc 3 294 5
+mul24.lo.s32 %r7, %r34, %r35;
+.loc 2 51 1
+add.s32 %r8, %r7, %r34;
+.loc 2 59 1
+mov.u32 %r22, %tid.x;
+.loc 2 59 1
+setp.gt.s32 %p3, %r22, 1023;
+@%p3 bra BB0_9;
+
+mov.u32 %r41, %r4;
+
+BB0_4:
+.loc 2 62 1
+add.s32 %r36, %r41, %r7;
+.loc 2 62 1
+setp.lt.s32 %p4, %r36, %r8;
+@%p4 bra BB0_6;
+
+mov.f32 %f12, 0f00000000;
+bra.uni BB0_8;
+
+BB0_6:
+mov.f32 %f12, 0f00000000;
+
+BB0_7:
+.loc 2 63 1
+mul.wide.s32 %rl6, %r36, 4;
+add.s64 %rl7, %rl3, %rl6;
+add.s64 %rl8, %rl2, %rl6;
+ld.global.f32 %f6, [%rl8];
+ld.global.f32 %f7, [%rl7];
+fma.rn.f32 %f12, %f7, %f6, %f12;
+.loc 2 62 63
+add.s32 %r36, %r36, 1024;
+.loc 2 62 1
+setp.lt.s32 %p5, %r36, %r8;
+@%p5 bra BB0_7;
+
+BB0_8:
+mul.wide.s32 %rl9, %r41, 4;
+mov.u64 %rl10, __cuda_local_var_40919_35_non_const_accumResult;
+add.s64 %rl11, %rl10, %rl9;
+.loc 2 65 1
+st.shared.f32 [%rl11], %f12;
+.loc 2 59 25
+add.s32 %r41, %r5, %r41;
+.loc 2 59 1
+setp.lt.s32 %p6, %r41, 1024;
+@%p6 bra BB0_4;
+
+BB0_9:
+mov.u32 %r38, 512;
+mov.u32 %r37, 0;
+
+BB0_10:
+.loc 2 73 1
+bar.sync 0;
+.loc 2 74 1
+setp.ge.s32 %p7, %r4, %r38;
+@%p7 bra BB0_13;
+
+mov.u32 %r40, %r4;
+
+BB0_12:
+mov.u32 %r16, %r40;
+.loc 2 75 1
+add.s32 %r28, %r16, %r38;
+mul.wide.s32 %rl12, %r28, 4;
+mov.u64 %rl13, __cuda_local_var_40919_35_non_const_accumResult;
+add.s64 %rl14, %rl13, %rl12;
+mul.wide.s32 %rl15, %r16, 4;
+add.s64 %rl16, %rl13, %rl15;
+.loc 2 75 1
+ld.shared.f32 %f8, [%rl16];
+ld.shared.f32 %f9, [%rl14];
+add.f32 %f10, %f8, %f9;
+st.shared.f32 [%rl16], %f10;
+.loc 2 74 27
+add.s32 %r17, %r5, %r16;
+.loc 2 74 1
+setp.lt.s32 %p8, %r17, %r38;
+mov.u32 %r40, %r17;
+.loc 2 74 1
+@%p8 bra BB0_12;
+
+BB0_13:
+.loc 2 72 22
+shr.s32 %r38, %r38, 1;
+add.s32 %r37, %r37, 1;
+.loc 2 49 25
+mov.u32 %r20, %nctaid.x;
+.loc 2 72 1
+setp.ne.s32 %p9, %r37, 10;
+@%p9 bra BB0_10;
+
+.loc 2 78 1
+@!%p1 bra BB0_16;
+
+.loc 2 78 1
+ld.shared.f32 %f11, [__cuda_local_var_40919_35_non_const_accumResult];
+ld.param.u64 %rl20, [_Z13scalarProdGPUPfS_S_ii_param_0];
+cvta.to.global.u64 %rl17, %rl20;
+.loc 2 78 1
+mul.wide.s32 %rl18, %r35, 4;
+add.s64 %rl19, %rl17, %rl18;
+st.global.f32 [%rl19], %f11;
+
+BB0_16:
+.loc 2 49 25
+add.s32 %r35, %r20, %r35;
+ld.param.u32 %r33, [_Z13scalarProdGPUPfS_S_ii_param_3];
+.loc 2 49 1
+setp.lt.s32 %p10, %r35, %r33;
+@%p10 bra BB0_2;
+
+BB0_17:
+.loc 2 80 2
+ret;
+}
+
+
+
+Fatbin elf code:
+================
+arch = sm_30
+code version = [1,4]
+producer = cuda
+host = linux
+compile_size = 64bit
+identifier = scalarProd.cu
+
+.section .strtab	STRTAB
+
+.section .shstrtab	STRTAB
+
+.section .symtab	SYMTAB
+ index           value           size      info    other  shndx    name  
+   0               0               0        0        0      0     (null)
+   1               0               0        3        0      1     .shstrtab
+   2               0               0        3        0      2     .strtab
+   3               0               0        3        0      3     .symtab
+   4               0               0        3        0      0     
+   5               0               0        3        0      0     
+   6               0             960        3        0      4     .text._Z13scalarProdGPUPfS_S_ii
+   7               0               0        3        0      6     .nv.info._Z13scalarProdGPUPfS_S_ii
+   8               0               0        3        0      8     .nv.info
+   9               0               0        3        0      7     .nv.shared._Z13scalarProdGPUPfS_S_ii
+  10               0               0        3        0      5     .nv.constant0._Z13scalarProdGPUPfS_S_ii
+  11               0             960       12       10      4     _Z13scalarProdGPUPfS_S_ii
+
+
+.nv.constant0._Z13scalarProdGPUPfS_S_ii	PROGBITS
+0x00000000  0x00000000  0x00000000  0x00000000  0x00000000  
+0x00000000  0x00000000  0x00000000  0x00000000  
+0x00000000  0x00000000  0x00000000  0x00000000  
+0x00000000  0x00000000  0x00000000  0x00000000  
+0x00000000  0x00000000  0x00000000  0x00000000  
+0x00000000  0x00000000  0x00000000  0x00000000  
+0x00000000  0x00000000  0x00000000  0x00000000  
+0x00000000  0x00000000  0x00000000  0x00000000  
+0x00000000  0x00000000  0x00000000  0x00000000  
+0x00000000  0x00000000  0x00000000  0x00000000  
+0x00000000  0x00000000  0x00000000  0x00000000  
+0x00000000  0x00000000  0x00000000  0x00000000  
+0x00000000  0x00000000  0x00000000  0x00000000  
+0x00000000  0x00000000  0x00000000  0x00000000  
+0x00000000  0x00000000  0x00000000  0x00000000  
+0x00000000  0x00000000  0x00000000  0x00000000  
+0x00000000  0x00000000  0x00000000  0x00000000  
+0x00000000  0x00000000  0x00000000  0x00000000  
+0x00000000  0x00000000  0x00000000  0x00000000  
+0x00000000  0x00000000  0x00000000  0x00000000  
+0x00000000  0x00000000  0x00000000  0x00000000  
+0x00000000  0x00000000  0x00000000  
+
+
+.nv.shared._Z13scalarProdGPUPfS_S_ii	NOBITS
+   No data to be dumped. 
+
+
+.text._Z13scalarProdGPUPfS_S_ii	PROGBITS
+bar = 1	reg = 19	lmem=0	smem=4096
+0x02c28007  0x22028040  0x10005de4  0x28004001  
+0x94001c04  0x2c000000  0x6001dc23  0x1b0e4005  
+0x000001e7  0x80000000  0x84009c04  0x2c000000  
+0x7000dde4  0x28004005  0xfc21dc23  0x190e0000  
+0x42804007  0x22028280  0x0030dc23  0x7000c060  
+0x84015c04  0x2c000000  0x60000007  0x60000008  
+0x00011c23  0x7000c060  0xfc53dc23  0x1a0ec00f  
+0x10339ca3  0x50000000  0x70e31c03  0x48004005  
+0x80000007  0x220002c2  0x800005e7  0x40000007  
+0x08035de4  0x28000000  0x80000007  0x70000006  
+0x38d3dc03  0x48000000  0x30f3dc23  0x188e0000  
+0x600005e7  0x40000000  0xfc041de4  0x28000000  
+0x428042e7  0x220002c0  0x00001de7  0xb0000000  
+0x00f15c03  0x4800c010  0xfc041de4  0x28000000  
+0x3053dc23  0x188e0000  0x00000007  0x60000004  
+0xc00025e7  0x40000003  0x10049de2  0x18000000  
+0xc2304007  0x22423042  0x40000007  0x60000003  
+0x10f11ce3  0x5000c000  0x00f45c03  0x4800c010  
+0x40f19ca3  0x20258005  0x5041dc43  0x48004005  
+0x11125ce3  0x5000c000  0x20f29ca3  0x20258005  
+0x02c04277  0x22c04202  0x0061dc85  0x84000000  
+0x3042dc43  0x48004005  0x21111ca3  0x20258005  
+0x30915c43  0x48004005  0x00a2dc85  0x84000000  
+0x41121ca3  0x20258005  0x00f3dc03  0x4800c020  
+0x00428047  0x22c26242  0x50925c43  0x48004005  
+0x00411c85  0x84000000  0x30f3dc23  0x188e0000  
+0x00821c85  0x84000000  0x01129c03  0x4800c020  
+0x1cb15c00  0x30200000  0x30a3dc23  0x18820000  
+0x0002e047  0x22c23000  0x20441c00  0x300a0000  
+0xe00005e7  0x4003fffc  0x30f3dc33  0x188e0000  
+0x000025e7  0xb0000000  0x10019df2  0x18000000  
+0x10f11ce3  0x5000c000  0x40f21ca3  0x200d8005  
+0x8042c207  0x20004372  0x50425c43  0x48004005  
+0x20f19ca3  0x200d8005  0x3041dc43  0x48004005  
+0x00811c85  0x84000000  0x00615c85  0x84000000  
+0x10541c00  0x30200000  0x00001de7  0xb0000000  
+0xc0428047  0x200002e2  0x08d11e03  0x6000c000  
+0xa0d35c03  0x48004000  0x00441c85  0xc9000000  
+0x00d3dc23  0x188ec010  0xa00005e7  0x4003fff8  
+0x00011df2  0x18000008  0xfc015de4  0x28000000  
+0x02c04317  0x22804000  0x00001c04  0x500ec000  
+0x1023dc23  0x1b0e0000  0xe0000007  0x60000001  
+0xa00005e7  0x40000001  0x0801dde4  0x28000000  
+0x10719c03  0x48000000  0x08725e03  0x6000c000  
+0x80428047  0x220282e2  0x08619e03  0x6000c000  
+0x00921c85  0xc1000000  0x00619c85  0xc1000000  
+0xa071dc03  0x48004000  0x1073dc23  0x188e0000  
+0x18819c00  0x50000000  0x00919c85  0xc9000000  
+0xc04002e7  0x220002e2  0x800005e7  0x4003fffe  
+0x04515c13  0x4800c000  0x2853dc23  0x1a8ec000  
+0x04411c23  0x5800c000  0x400005e7  0x4003fffd  
+0xe000a1e7  0x40000000  0x000181e4  0x28004005  
+0x82c27047  0x22c28002  0x03f10085  0xc1000000  
+0x100140e3  0x5000c000  0x100180a3  0x200dc000  
+0x1051c043  0x48004005  0x00610085  0x94000000  
+0xd0001c03  0x48004000  0x6003dc23  0x188e4005  
+0x0002e2e7  0x20000000  0x000005e7  0x4003fff3  
+0x00001de7  0x80000000  0xe0001de7  0x4003ffff  
+0x00001de4  0x40000000  0x00001de4  0x40000000  
+0x00001de4  0x40000000  0x00001de4  0x40000000  
+
+
+
+.nv.info._Z13scalarProdGPUPfS_S_ii	PROGBITS
+	<0x1>
+	Attribute:	EIATTR_PARAM_CBANK
+	Format:	EIFMT_SVAL
+	Value:	0xa 0x200140 
+	<0x2>
+	Attribute:	EIATTR_CBANK_PARAM_SIZE
+	Format:	EIFMT_HVAL
+	Value:	0x20
+	<0x3>
+	Attribute:	EIATTR_KPARAM_INFO
+	Format:	EIFMT_SVAL
+	Value:	Index : 0x0	Ordinal : 0x4	Offset  : 0x1c	Size    : 0x4
+		Pointee's logAlignment : 0x0	Space : 0x0	cbank : 0x1f	Parameter Space : CBANK	
+	<0x4>
+	Attribute:	EIATTR_KPARAM_INFO
+	Format:	EIFMT_SVAL
+	Value:	Index : 0x0	Ordinal : 0x3	Offset  : 0x18	Size    : 0x4
+		Pointee's logAlignment : 0x0	Space : 0x0	cbank : 0x1f	Parameter Space : CBANK	
+	<0x5>
+	Attribute:	EIATTR_KPARAM_INFO
+	Format:	EIFMT_SVAL
+	Value:	Index : 0x0	Ordinal : 0x2	Offset  : 0x10	Size    : 0x8
+		Pointee's logAlignment : 0x0	Space : 0x0	cbank : 0x1f	Parameter Space : CBANK	
+	<0x6>
+	Attribute:	EIATTR_KPARAM_INFO
+	Format:	EIFMT_SVAL
+	Value:	Index : 0x0	Ordinal : 0x1	Offset  : 0x8	Size    : 0x8
+		Pointee's logAlignment : 0x0	Space : 0x0	cbank : 0x1f	Parameter Space : CBANK	
+	<0x7>
+	Attribute:	EIATTR_KPARAM_INFO
+	Format:	EIFMT_SVAL
+	Value:	Index : 0x0	Ordinal : 0x0	Offset  : 0x0	Size    : 0x8
+		Pointee's logAlignment : 0x0	Space : 0x0	cbank : 0x1f	Parameter Space : CBANK	
+	<0x8>
+	Attribute:	EIATTR_SYNC_STACK
+	Format:	EIFMT_SVAL
+	Value:	0x240240 0x20 
+
+
+.nv.info	PROGBITS
+	<0x1>
+	Attribute:	EIATTR_MIN_STACK_SIZE
+	Format:	EIFMT_SVAL
+	Value:	function: _Z13scalarProdGPUPfS_S_ii(0xb)	min stack size: 0x0
+	<0x2>
+	Attribute:	EIATTR_FRAME_SIZE
+	Format:	EIFMT_SVAL
+	Value:	function: _Z13scalarProdGPUPfS_S_ii(0xb)	frame size: 0x0
+
+	code for sm_30
+		Function : _Z13scalarProdGPUPfS_S_ii
+	/*0008*/     /*0x10005de428004001*/ 	MOV R1, c [0x0] [0x44];
+	/*0010*/     /*0x94001c042c000000*/ 	S2R R0, SR_CTAid_X;
+	/*0018*/     /*0x6001dc231b0e4005*/ 	ISETP.GE.AND P0, pt, R0, c [0x0] [0x158], pt;
+	/*0020*/     /*0x000001e780000000*/ 	@P0 EXIT;
+	/*0028*/     /*0x84009c042c000000*/ 	S2R R2, SR_Tid_X;
+	/*0030*/     /*0x7000dde428004005*/ 	MOV R3, c [0x0] [0x15c];
+	/*0038*/     /*0xfc21dc23190e0000*/ 	ISETP.EQ.AND P0, pt, R2, RZ, pt;
+	/*0048*/     /*0x0030dc237000c060*/ 	BFE R3, R3, 0x1800;
+	/*0050*/     /*0x84015c042c000000*/ 	S2R R5, SR_Tid_X;
+	/*0058*/     /*0x6000000760000008*/ 	SSY 0x278;
+	/*0060*/     /*0x00011c237000c060*/ 	BFE R4, R0, 0x1800;
+	/*0068*/     /*0xfc53dc231a0ec00f*/ 	ISETP.GT.AND P1, pt, R5, 0x3ff, pt;
+	/*0070*/     /*0x10339ca350000000*/ 	IMUL R14, R3, R4;
+	/*0078*/     /*0x70e31c0348004005*/ 	IADD R12, R14, c [0x0] [0x15c];
+	/*0088*/     /*0x800005e740000007*/ 	@P1 BRA 0x270;
+	/*0090*/     /*0x08035de428000000*/ 	MOV R13, R2;
+	/*0098*/     /*0x8000000770000006*/ 	PCNT 0x240;
+	/*00a0*/     /*0x38d3dc0348000000*/ 	IADD R15, R13, R14;
+	/*00a8*/     /*0x30f3dc23188e0000*/ 	ISETP.LT.AND P1, pt, R15, R12, pt;
+	/*00b0*/     /*0x600005e740000000*/ 	@P1 BRA 0xd0;
+	/*00b8*/     /*0xfc041de428000000*/ 	MOV R16, RZ;
+	/*00c8*/     /*0x00001de7b0000000*/ 	CONT;
+	/*00d0*/     /*0x00f15c034800c010*/ 	IADD R5, R15, 0x400;
+	/*00d8*/     /*0xfc041de428000000*/ 	MOV R16, RZ;
+	/*00e0*/     /*0x3053dc23188e0000*/ 	ISETP.LT.AND P1, pt, R5, R12, pt;
+	/*00e8*/     /*0x0000000760000004*/ 	SSY 0x1f0;
+	/*00f0*/     /*0xc00025e740000003*/ 	@!P1 BRA 0x1e8;
+	/*00f8*/     /*0x10049de218000000*/ 	MOV32I R18, 0x4;
+	/*0108*/     /*0x4000000760000003*/ 	SSY 0x1e0;
+	/*0110*/     /*0x10f11ce35000c000*/ 	IMUL.HI R4, R15, 0x4;
+	/*0118*/     /*0x00f45c034800c010*/ 	IADD R17, R15, 0x400;
+	/*0120*/     /*0x40f19ca320258005*/ 	IMAD R6.CC, R15, R18, c [0x0] [0x150];
+	/*0128*/     /*0x5041dc4348004005*/ 	IADD.X R7, R4, c [0x0] [0x154];
+	/*0130*/     /*0x11125ce35000c000*/ 	IMUL.HI R9, R17, 0x4;
+	/*0138*/     /*0x20f29ca320258005*/ 	IMAD R10.CC, R15, R18, c [0x0] [0x148];
+	/*0148*/     /*0x0061dc8584000000*/ 	LD.E R7, [R6];
+	/*0150*/     /*0x3042dc4348004005*/ 	IADD.X R11, R4, c [0x0] [0x14c];
+	/*0158*/     /*0x21111ca320258005*/ 	IMAD R4.CC, R17, R18, c [0x0] [0x148];
+	/*0160*/     /*0x30915c4348004005*/ 	IADD.X R5, R9, c [0x0] [0x14c];
+	/*0168*/     /*0x00a2dc8584000000*/ 	LD.E R11, [R10];
+	/*0170*/     /*0x41121ca320258005*/ 	IMAD R8.CC, R17, R18, c [0x0] [0x150];
+	/*0178*/     /*0x00f3dc034800c020*/ 	IADD R15, R15, 0x800;
+	/*0188*/     /*0x50925c4348004005*/ 	IADD.X R9, R9, c [0x0] [0x154];
+	/*0190*/     /*0x00411c8584000000*/ 	LD.E R4, [R4];
+	/*0198*/     /*0x30f3dc23188e0000*/ 	ISETP.LT.AND P1, pt, R15, R12, pt;
+	/*01a0*/     /*0x00821c8584000000*/ 	LD.E R8, [R8];
+	/*01a8*/     /*0x01129c034800c020*/ 	IADD R10, R17, 0x800;
+	/*01b0*/     /*0x1cb15c0030200000*/ 	FFMA R5, R11, R7, R16;
+	/*01b8*/     /*0x30a3dc2318820000*/ 	ISETP.LT.AND P1, pt, R10, R12, P1;
+	/*01c8*/     /*0x20441c00300a0000*/ 	FFMA R16, R4, R8, R5;
+	/*01d0*/     /*0xe00005e74003fffc*/ 	@P1 BRA 0x110;
+	/*01d8*/     /*0x30f3dc33188e0000*/ 	ISETP.LT.AND.S P1, pt, R15, R12, pt;
+	/*01e0*/     /*0x000025e7b0000000*/ 	@!P1 CONT;
+	/*01e8*/     /*0x10019df218000000*/ 	MOV32I.S R6, 0x4;
+	/*01f0*/     /*0x10f11ce35000c000*/ 	IMUL.HI R4, R15, 0x4;
+	/*01f8*/     /*0x40f21ca3200d8005*/ 	IMAD R8.CC, R15, R6, c [0x0] [0x150];
+	/*0208*/     /*0x50425c4348004005*/ 	IADD.X R9, R4, c [0x0] [0x154];
+	/*0210*/     /*0x20f19ca3200d8005*/ 	IMAD R6.CC, R15, R6, c [0x0] [0x148];
+	/*0218*/     /*0x3041dc4348004005*/ 	IADD.X R7, R4, c [0x0] [0x14c];
+	/*0220*/     /*0x00811c8584000000*/ 	LD.E R4, [R8];
+	/*0228*/     /*0x00615c8584000000*/ 	LD.E R5, [R6];
+	/*0230*/     /*0x10541c0030200000*/ 	FFMA R16, R5, R4, R16;
+	/*0238*/     /*0x00001de7b0000000*/ 	CONT;
+	/*0248*/     /*0x08d11e036000c000*/ 	SHL.W R4, R13, 0x2;
+	/*0250*/     /*0xa0d35c0348004000*/ 	IADD R13, R13, c [0x0] [0x28];
+	/*0258*/     /*0x00441c85c9000000*/ 	STS [R4], R16;
+	/*0260*/     /*0x00d3dc23188ec010*/ 	ISETP.LT.AND P1, pt, R13, 0x400, pt;
+	/*0268*/     /*0xa00005e74003fff8*/ 	@P1 BRA 0x98;
+	/*0270*/     /*0x00011df218000008*/ 	MOV32I.S R4, 0x200;
+	/*0278*/     /*0xfc015de428000000*/ 	MOV R5, RZ;
+	/*0288*/     /*0x00001c04500ec000*/ 	BAR.SYNC 0x0;
+	/*0290*/     /*0x1023dc231b0e0000*/ 	ISETP.GE.AND P1, pt, R2, R4, pt;
+	/*0298*/     /*0xe000000760000001*/ 	SSY 0x318;
+	/*02a0*/     /*0xa00005e740000001*/ 	@P1 BRA 0x310;
+	/*02a8*/     /*0x0801dde428000000*/ 	MOV R7, R2;
+	/*02b0*/     /*0x10719c0348000000*/ 	IADD R6, R7, R4;
+	/*02b8*/     /*0x08725e036000c000*/ 	SHL.W R9, R7, 0x2;
+	/*02c8*/     /*0x08619e036000c000*/ 	SHL.W R6, R6, 0x2;
+	/*02d0*/     /*0x00921c85c1000000*/ 	LDS R8, [R9];
+	/*02d8*/     /*0x00619c85c1000000*/ 	LDS R6, [R6];
+	/*02e0*/     /*0xa071dc0348004000*/ 	IADD R7, R7, c [0x0] [0x28];
+	/*02e8*/     /*0x1073dc23188e0000*/ 	ISETP.LT.AND P1, pt, R7, R4, pt;
+	/*02f0*/     /*0x18819c0050000000*/ 	FADD R6, R8, R6;
+	/*02f8*/     /*0x00919c85c9000000*/ 	STS [R9], R6;
+	/*0308*/     /*0x800005e74003fffe*/ 	@P1 BRA 0x2b0;
+	/*0310*/     /*0x04515c134800c000*/ 	IADD.S R5, R5, 0x1;
+	/*0318*/     /*0x2853dc231a8ec000*/ 	ISETP.NE.AND P1, pt, R5, 0xa, pt;
+	/*0320*/     /*0x04411c235800c000*/ 	SHR R4, R4, 0x1;
+	/*0328*/     /*0x400005e74003fffd*/ 	@P1 BRA 0x280;
+	/*0330*/     /*0xe000a1e740000000*/ 	@!P0 BRA.U 0x370;
+	/*0338*/     /*0x000181e428004005*/ 	@P0 MOV R6, c [0x0] [0x140];
+	/*0348*/     /*0x03f10085c1000000*/ 	@P0 LDS R4, [0x0];
+	/*0350*/     /*0x100140e35000c000*/ 	@P0 IMUL.HI R5, R0, 0x4;
+	/*0358*/     /*0x100180a3200dc000*/ 	@P0 IMAD R6.CC, R0, 0x4, R6;
+	/*0360*/     /*0x1051c04348004005*/ 	@P0 IADD.X R7, R5, c [0x0] [0x144];
+	/*0368*/     /*0x0061008594000000*/ 	@P0 ST.E [R6], R4;
+	/*0370*/     /*0xd0001c0348004000*/ 	IADD R0, R0, c [0x0] [0x34];
+	/*0378*/     /*0x6003dc23188e4005*/ 	ISETP.LT.AND P1, pt, R0, c [0x0] [0x158], pt;
+	/*0388*/     /*0x000005e74003fff3*/ 	@P1 BRA 0x50;
+	/*0390*/     /*0x00001de780000000*/ 	EXIT;
+	/*0398*/     /*0xe0001de74003ffff*/ 	BRA 0x398;
+	/*03a0*/     /*0x00001de440000000*/ 	NOP CC.T;
+	/*03a8*/     /*0x00001de440000000*/ 	NOP CC.T;
+	/*03b0*/     /*0x00001de440000000*/ 	NOP CC.T;
+	/*03b8*/     /*0x00001de440000000*/ 	NOP CC.T;
+		..........................................
+
+
+
+Fatbin ptx code:
+================
+arch = sm_20
+code version = [3,0]
+producer = cuda
+host = linux
+compile_size = 64bit
+identifier = scalarProd.cu
+
+
+
+
+
+
+.version 3.0
+.target sm_20
+.address_size 64
+
+.file	1 "/tmp/tmpxft_00011dfe_00000000-19_scalarProd.compute_20.cpp3.i"
+.file	2 "scalarProd_kernel.cu"
+.file	3 "/usr/local/cuda/nvvm/ci_include.h"
+
+
+.entry _Z13scalarProdGPUPfS_S_ii(
+.param .u64 _Z13scalarProdGPUPfS_S_ii_param_0,
+.param .u64 _Z13scalarProdGPUPfS_S_ii_param_1,
+.param .u64 _Z13scalarProdGPUPfS_S_ii_param_2,
+.param .u32 _Z13scalarProdGPUPfS_S_ii_param_3,
+.param .u32 _Z13scalarProdGPUPfS_S_ii_param_4
+)
+{
+.reg .f32 %f<13>;
+.reg .pred %p<11>;
+.reg .s32 %r<42>;
+.reg .s64 %rl<21>;
+
+	.shared .align 4 .b8 __cuda_local_var_40846_35_non_const_accumResult[4096];
+
+ld.param.u64 %rl4, [_Z13scalarProdGPUPfS_S_ii_param_1];
+ld.param.u64 %rl5, [_Z13scalarProdGPUPfS_S_ii_param_2];
+ld.param.u32 %r1, [_Z13scalarProdGPUPfS_S_ii_param_3];
+cvta.to.global.u64 %rl2, %rl5;
+cvta.to.global.u64 %rl3, %rl4;
+.loc 2 49 1
+mov.u32 %r35, %ctaid.x;
+.loc 2 49 1
+setp.ge.s32 %p2, %r35, %r1;
+@%p2 bra BB0_17;
+
+.loc 2 59 1
+mov.u32 %r4, %tid.x;
+.loc 2 59 25
+mov.u32 %r5, %ntid.x;
+.loc 2 78 1
+setp.eq.s32 %p1, %r4, 0;
+
+BB0_2:
+ld.param.u32 %r34, [_Z13scalarProdGPUPfS_S_ii_param_4];
+.loc 3 294 5
+mul24.lo.s32 %r7, %r34, %r35;
+.loc 2 51 1
+add.s32 %r8, %r7, %r34;
+.loc 2 59 1
+mov.u32 %r22, %tid.x;
+.loc 2 59 1
+setp.gt.s32 %p3, %r22, 1023;
+@%p3 bra BB0_9;
+
+mov.u32 %r41, %r4;
+
+BB0_4:
+.loc 2 62 1
+add.s32 %r36, %r41, %r7;
+.loc 2 62 1
+setp.lt.s32 %p4, %r36, %r8;
+@%p4 bra BB0_6;
+
+mov.f32 %f12, 0f00000000;
+bra.uni BB0_8;
+
+BB0_6:
+mov.f32 %f12, 0f00000000;
+
+BB0_7:
+.loc 2 63 1
+mul.wide.s32 %rl6, %r36, 4;
+add.s64 %rl7, %rl3, %rl6;
+add.s64 %rl8, %rl2, %rl6;
+ld.global.f32 %f6, [%rl8];
+ld.global.f32 %f7, [%rl7];
+fma.rn.f32 %f12, %f7, %f6, %f12;
+.loc 2 62 63
+add.s32 %r36, %r36, 1024;
+.loc 2 62 1
+setp.lt.s32 %p5, %r36, %r8;
+@%p5 bra BB0_7;
+
+BB0_8:
+mul.wide.s32 %rl9, %r41, 4;
+mov.u64 %rl10, __cuda_local_var_40846_35_non_const_accumResult;
+add.s64 %rl11, %rl10, %rl9;
+.loc 2 65 1
+st.shared.f32 [%rl11], %f12;
+.loc 2 59 25
+add.s32 %r41, %r5, %r41;
+.loc 2 59 1
+setp.lt.s32 %p6, %r41, 1024;
+@%p6 bra BB0_4;
+
+BB0_9:
+mov.u32 %r38, 512;
+mov.u32 %r37, 0;
+
+BB0_10:
+.loc 2 73 1
+bar.sync 0;
+.loc 2 74 1
+setp.ge.s32 %p7, %r4, %r38;
+@%p7 bra BB0_13;
+
+mov.u32 %r40, %r4;
+
+BB0_12:
+mov.u32 %r16, %r40;
+.loc 2 75 1
+add.s32 %r28, %r16, %r38;
+mul.wide.s32 %rl12, %r28, 4;
+mov.u64 %rl13, __cuda_local_var_40846_35_non_const_accumResult;
+add.s64 %rl14, %rl13, %rl12;
+mul.wide.s32 %rl15, %r16, 4;
+add.s64 %rl16, %rl13, %rl15;
+.loc 2 75 1
+ld.shared.f32 %f8, [%rl16];
+ld.shared.f32 %f9, [%rl14];
+add.f32 %f10, %f8, %f9;
+st.shared.f32 [%rl16], %f10;
+.loc 2 74 27
+add.s32 %r17, %r5, %r16;
+.loc 2 74 1
+setp.lt.s32 %p8, %r17, %r38;
+mov.u32 %r40, %r17;
+.loc 2 74 1
+@%p8 bra BB0_12;
+
+BB0_13:
+.loc 2 72 22
+shr.s32 %r38, %r38, 1;
+add.s32 %r37, %r37, 1;
+.loc 2 49 25
+mov.u32 %r20, %nctaid.x;
+.loc 2 72 1
+setp.ne.s32 %p9, %r37, 10;
+@%p9 bra BB0_10;
+
+.loc 2 78 1
+@!%p1 bra BB0_16;
+
+.loc 2 78 1
+ld.shared.f32 %f11, [__cuda_local_var_40846_35_non_const_accumResult];
+ld.param.u64 %rl20, [_Z13scalarProdGPUPfS_S_ii_param_0];
+cvta.to.global.u64 %rl17, %rl20;
+.loc 2 78 1
+mul.wide.s32 %rl18, %r35, 4;
+add.s64 %rl19, %rl17, %rl18;
+st.global.f32 [%rl19], %f11;
+
+BB0_16:
+.loc 2 49 25
+add.s32 %r35, %r20, %r35;
+ld.param.u32 %r33, [_Z13scalarProdGPUPfS_S_ii_param_3];
+.loc 2 49 1
+setp.lt.s32 %p10, %r35, %r33;
+@%p10 bra BB0_2;
+
+BB0_17:
+.loc 2 80 2
+ret;
+}
+
+
+
+Fatbin elf code:
+================
+arch = sm_20
+code version = [1,4]
+producer = cuda
+host = linux
+compile_size = 64bit
+identifier = scalarProd.cu
+
+.section .strtab	STRTAB
+
+.section .shstrtab	STRTAB
+
+.section .symtab	SYMTAB
+ index           value           size      info    other  shndx    name  
+   0               0               0        0        0      0     (null)
+   1               0               0        3        0      1     .shstrtab
+   2               0               0        3        0      2     .strtab
+   3               0               0        3        0      3     .symtab
+   4               0               0        3        0      0     
+   5               0               0        3        0      0     
+   6               0             808        3        0      4     .text._Z13scalarProdGPUPfS_S_ii
+   7               0               0        3        0      6     .nv.info._Z13scalarProdGPUPfS_S_ii
+   8               0               0        3        0      8     .nv.info
+   9               0               0        3        0      7     .nv.shared._Z13scalarProdGPUPfS_S_ii
+  10               0               0        3        0      5     .nv.constant0._Z13scalarProdGPUPfS_S_ii
+  11               0             808       12       10      4     _Z13scalarProdGPUPfS_S_ii
+
+
+.nv.constant0._Z13scalarProdGPUPfS_S_ii	PROGBITS
+0x00000000  0x00000000  0x00000000  0x00000000  0x00000000  
+0x00000000  0x00000000  0x00000000  0x00000000  
+0x00000000  0x00000000  0x00000000  0x00000000  
+0x00000000  0x00000000  0x00000000  
+
+
+.nv.shared._Z13scalarProdGPUPfS_S_ii	NOBITS
+   No data to be dumped. 
+
+
+.text._Z13scalarProdGPUPfS_S_ii	PROGBITS
+bar = 1	reg = 19	lmem=0	smem=4096
+0x00005de4  0x28004404  0x94001c04  0x2c000000  
+0xe001dc23  0x1b0e4000  0x000001e7  0x80000000  
+0x84035c04  0x2c000000  0xf0009de4  0x28004000  
+0xfcd1dc23  0x190e0000  0x00239c23  0x7000c060  
+0x00009c23  0x7000c060  0x8400dc04  0x2c000000  
+0x40000007  0x60000007  0x08e3dca3  0x50000000  
+0xfc33dc23  0x1a0ec00f  0xf0f29c03  0x48004000  
+0xa00005e7  0x40000006  0x3402dde4  0x28000000  
+0xc0000007  0x70000005  0x3cb41c03  0x48000000  
+0x2903dc23  0x188e0000  0x400005e7  0x40000000  
+0xfc031de4  0x28000000  0x00001de7  0xb0000000  
+0x01009c03  0x4800c010  0xfc031de4  0x28000000  
+0xa0000007  0x60000003  0x2823dc23  0x188e0000  
+0x400025e7  0x40000003  0x10049de2  0x18000000  
+0xe0000007  0x60000002  0x11009ce3  0x5000c000  
+0xa1011ca3  0x20258000  0x01045c03  0x4800c010  
+0xb0215c43  0x48004000  0xc1019ca3  0x20258000  
+0x11125ce3  0x5000c000  0x00415c85  0x84000000  
+0xd021dc43  0x48004000  0xa1109ca3  0x20258000  
+0x01041c03  0x4800c020  0x0061dc85  0x84000000  
+0xb090dc43  0x48004000  0xc1121ca3  0x20258000  
+0x2903dc23  0x188e0000  0x00209c85  0x84000000  
+0xd0925c43  0x48004000  0x01119c03  0x4800c020  
+0x00811c85  0x84000000  0x2863dc23  0x18820000  
+0x1c50dc00  0x30180000  0x10231c00  0x30060000  
+0x400005e7  0x4003fffd  0x2903dc33  0x188e0000  
+0x000025e7  0xb0000000  0x10009df2  0x18000000  
+0x1100dce3  0x5000c000  0xc1011ca3  0x20058000  
+0xd0315c43  0x48004000  0xa1009ca3  0x20058000  
+0x00411c85  0x84000000  0xb030dc43  0x48004000  
+0x00209c85  0x84000000  0x10231c00  0x30180000  
+0x00001de7  0xb0000000  0x08b09e03  0x6000c000  
+0x20b2dc03  0x48004000  0x00231c85  0xc9000000  
+0x00b3dc23  0x188ec010  0x800005e7  0x4003fff9  
+0x00009df2  0x18000008  0xfc00dde4  0x28000000  
+0x281fdc03  0x207e0000  0xe0000007  0x60000001  
+0xffffdc04  0x50ee0000  0x08d3dc23  0x1b0e0000  
+0x600005e7  0x40000001  0x34011de4  0x28000000  
+0x08415c03  0x48000000  0x0841de03  0x6000c000  
+0x20411c03  0x48004000  0x08515e03  0x6000c000  
+0x00719c85  0xc1000000  0x0843dc23  0x188e0000  
+0x00515c85  0xc1000000  0x14615c00  0x50000000  
+0x00715c85  0xc9000000  0xc00005e7  0x4003fffe  
+0x0430dc13  0x4800c000  0x2833dc23  0x1a8ec000  
+0x04209c23  0x5800c000  0x800005e7  0x4003fffd  
+0xc000a1e7  0x40000000  0x800081e4  0x28004000  
+0x1000c0e3  0x5000c000  0x100100a3  0x2005c000  
+0x03f08085  0xc1000000  0x90314043  0x48004000  
+0x00408085  0x94000000  0x50001c03  0x48004000  
+0xe003dc23  0x188e4000  0x800005e7  0x4003fff4  
+0x00001de7  0x80000000  
+
+
+.nv.info._Z13scalarProdGPUPfS_S_ii	PROGBITS
+	<0x1>
+	Attribute:	EIATTR_PARAM_CBANK
+	Format:	EIFMT_SVAL
+	Value:	0xa 0x200020 
+	<0x2>
+	Attribute:	EIATTR_CBANK_PARAM_SIZE
+	Format:	EIFMT_HVAL
+	Value:	0x20
+	<0x3>
+	Attribute:	EIATTR_KPARAM_INFO
+	Format:	EIFMT_SVAL
+	Value:	Index : 0x0	Ordinal : 0x4	Offset  : 0x1c	Size    : 0x4
+		Pointee's logAlignment : 0x0	Space : 0x0	cbank : 0x1f	Parameter Space : CBANK	
+	<0x4>
+	Attribute:	EIATTR_KPARAM_INFO
+	Format:	EIFMT_SVAL
+	Value:	Index : 0x0	Ordinal : 0x3	Offset  : 0x18	Size    : 0x4
+		Pointee's logAlignment : 0x0	Space : 0x0	cbank : 0x1f	Parameter Space : CBANK	
+	<0x5>
+	Attribute:	EIATTR_KPARAM_INFO
+	Format:	EIFMT_SVAL
+	Value:	Index : 0x0	Ordinal : 0x2	Offset  : 0x10	Size    : 0x8
+		Pointee's logAlignment : 0x0	Space : 0x0	cbank : 0x1f	Parameter Space : CBANK	
+	<0x6>
+	Attribute:	EIATTR_KPARAM_INFO
+	Format:	EIFMT_SVAL
+	Value:	Index : 0x0	Ordinal : 0x1	Offset  : 0x8	Size    : 0x8
+		Pointee's logAlignment : 0x0	Space : 0x0	cbank : 0x1f	Parameter Space : CBANK	
+	<0x7>
+	Attribute:	EIATTR_KPARAM_INFO
+	Format:	EIFMT_SVAL
+	Value:	Index : 0x0	Ordinal : 0x0	Offset  : 0x0	Size    : 0x8
+		Pointee's logAlignment : 0x0	Space : 0x0	cbank : 0x1f	Parameter Space : CBANK	
+	<0x8>
+	Attribute:	EIATTR_SYNC_STACK
+	Format:	EIFMT_SVAL
+	Value:	0x2401b0 0x20 
+
+
+.nv.info	PROGBITS
+	<0x1>
+	Attribute:	EIATTR_MIN_STACK_SIZE
+	Format:	EIFMT_SVAL
+	Value:	function: _Z13scalarProdGPUPfS_S_ii(0xb)	min stack size: 0x0
+	<0x2>
+	Attribute:	EIATTR_FRAME_SIZE
+	Format:	EIFMT_SVAL
+	Value:	function: _Z13scalarProdGPUPfS_S_ii(0xb)	frame size: 0x0
+
+	code for sm_20
+		Function : _Z13scalarProdGPUPfS_S_ii
+	/*0000*/     /*0x00005de428004404*/ 	MOV R1, c [0x1] [0x100];
+	/*0008*/     /*0x94001c042c000000*/ 	S2R R0, SR_CTAid_X;
+	/*0010*/     /*0xe001dc231b0e4000*/ 	ISETP.GE.AND P0, pt, R0, c [0x0] [0x38], pt;
+	/*0018*/     /*0x000001e780000000*/ 	@P0 EXIT;
+	/*0020*/     /*0x84035c042c000000*/ 	S2R R13, SR_Tid_X;
+	/*0028*/     /*0xf0009de428004000*/ 	MOV R2, c [0x0] [0x3c];
+	/*0030*/     /*0xfcd1dc23190e0000*/ 	ISETP.EQ.AND P0, pt, R13, RZ, pt;
+	/*0038*/     /*0x00239c237000c060*/ 	BFE R14, R2, 0x1800;
+	/*0040*/     /*0x00009c237000c060*/ 	BFE R2, R0, 0x1800;
+	/*0048*/     /*0x8400dc042c000000*/ 	S2R R3, SR_Tid_X;
+	/*0050*/     /*0x4000000760000007*/ 	SSY 0x228;
+	/*0058*/     /*0x08e3dca350000000*/ 	IMUL R15, R14, R2;
+	/*0060*/     /*0xfc33dc231a0ec00f*/ 	ISETP.GT.AND P1, pt, R3, 0x3ff, pt;
+	/*0068*/     /*0xf0f29c0348004000*/ 	IADD R10, R15, c [0x0] [0x3c];
+	/*0070*/     /*0xa00005e740000006*/ 	@P1 BRA 0x220;
+	/*0078*/     /*0x3402dde428000000*/ 	MOV R11, R13;
+	/*0080*/     /*0xc000000770000005*/ 	PCNT 0x1f8;
+	/*0088*/     /*0x3cb41c0348000000*/ 	IADD R16, R11, R15;
+	/*0090*/     /*0x2903dc23188e0000*/ 	ISETP.LT.AND P1, pt, R16, R10, pt;
+	/*0098*/     /*0x400005e740000000*/ 	@P1 BRA 0xb0;
+	/*00a0*/     /*0xfc031de428000000*/ 	MOV R12, RZ;
+	/*00a8*/     /*0x00001de7b0000000*/ 	CONT;
+	/*00b0*/     /*0x01009c034800c010*/ 	IADD R2, R16, 0x400;
+	/*00b8*/     /*0xfc031de428000000*/ 	MOV R12, RZ;
+	/*00c0*/     /*0xa000000760000003*/ 	SSY 0x1b0;
+	/*00c8*/     /*0x2823dc23188e0000*/ 	ISETP.LT.AND P1, pt, R2, R10, pt;
+	/*00d0*/     /*0x400025e740000003*/ 	@!P1 BRA 0x1a8;
+	/*00d8*/     /*0x10049de218000000*/ 	MOV32I R18, 0x4;
+	/*00e0*/     /*0xe000000760000002*/ 	SSY 0x1a0;
+	/*00e8*/     /*0x11009ce35000c000*/ 	IMUL.HI R2, R16, 0x4;
+	/*00f0*/     /*0xa1011ca320258000*/ 	IMAD R4.CC, R16, R18, c [0x0] [0x28];
+	/*00f8*/     /*0x01045c034800c010*/ 	IADD R17, R16, 0x400;
+	/*0100*/     /*0xb0215c4348004000*/ 	IADD.X R5, R2, c [0x0] [0x2c];
+	/*0108*/     /*0xc1019ca320258000*/ 	IMAD R6.CC, R16, R18, c [0x0] [0x30];
+	/*0110*/     /*0x11125ce35000c000*/ 	IMUL.HI R9, R17, 0x4;
+	/*0118*/     /*0x00415c8584000000*/ 	LD.E R5, [R4];
+	/*0120*/     /*0xd021dc4348004000*/ 	IADD.X R7, R2, c [0x0] [0x34];
+	/*0128*/     /*0xa1109ca320258000*/ 	IMAD R2.CC, R17, R18, c [0x0] [0x28];
+	/*0130*/     /*0x01041c034800c020*/ 	IADD R16, R16, 0x800;
+	/*0138*/     /*0x0061dc8584000000*/ 	LD.E R7, [R6];
+	/*0140*/     /*0xb090dc4348004000*/ 	IADD.X R3, R9, c [0x0] [0x2c];
+	/*0148*/     /*0xc1121ca320258000*/ 	IMAD R8.CC, R17, R18, c [0x0] [0x30];
+	/*0150*/     /*0x2903dc23188e0000*/ 	ISETP.LT.AND P1, pt, R16, R10, pt;
+	/*0158*/     /*0x00209c8584000000*/ 	LD.E R2, [R2];
+	/*0160*/     /*0xd0925c4348004000*/ 	IADD.X R9, R9, c [0x0] [0x34];
+	/*0168*/     /*0x01119c034800c020*/ 	IADD R6, R17, 0x800;
+	/*0170*/     /*0x00811c8584000000*/ 	LD.E R4, [R8];
+	/*0178*/     /*0x2863dc2318820000*/ 	ISETP.LT.AND P1, pt, R6, R10, P1;
+	/*0180*/     /*0x1c50dc0030180000*/ 	FFMA R3, R5, R7, R12;
+	/*0188*/     /*0x10231c0030060000*/ 	FFMA R12, R2, R4, R3;
+	/*0190*/     /*0x400005e74003fffd*/ 	@P1 BRA 0xe8;
+	/*0198*/     /*0x2903dc33188e0000*/ 	ISETP.LT.AND.S P1, pt, R16, R10, pt;
+	/*01a0*/     /*0x000025e7b0000000*/ 	@!P1 CONT;
+	/*01a8*/     /*0x10009df218000000*/ 	MOV32I.S R2, 0x4;
+	/*01b0*/     /*0x1100dce35000c000*/ 	IMUL.HI R3, R16, 0x4;
+	/*01b8*/     /*0xc1011ca320058000*/ 	IMAD R4.CC, R16, R2, c [0x0] [0x30];
+	/*01c0*/     /*0xd0315c4348004000*/ 	IADD.X R5, R3, c [0x0] [0x34];
+	/*01c8*/     /*0xa1009ca320058000*/ 	IMAD R2.CC, R16, R2, c [0x0] [0x28];
+	/*01d0*/     /*0x00411c8584000000*/ 	LD.E R4, [R4];
+	/*01d8*/     /*0xb030dc4348004000*/ 	IADD.X R3, R3, c [0x0] [0x2c];
+	/*01e0*/     /*0x00209c8584000000*/ 	LD.E R2, [R2];
+	/*01e8*/     /*0x10231c0030180000*/ 	FFMA R12, R2, R4, R12;
+	/*01f0*/     /*0x00001de7b0000000*/ 	CONT;
+	/*01f8*/     /*0x08b09e036000c000*/ 	SHL.W R2, R11, 0x2;
+	/*0200*/     /*0x20b2dc0348004000*/ 	IADD R11, R11, c [0x0] [0x8];
+	/*0208*/     /*0x00231c85c9000000*/ 	STS [R2], R12;
+	/*0210*/     /*0x00b3dc23188ec010*/ 	ISETP.LT.AND P1, pt, R11, 0x400, pt;
+	/*0218*/     /*0x800005e74003fff9*/ 	@P1 BRA 0x80;
+	/*0220*/     /*0x00009df218000008*/ 	MOV32I.S R2, 0x200;
+	/*0228*/     /*0xfc00dde428000000*/ 	MOV R3, RZ;
+	/*0230*/     /*0x281fdc03207e0000*/ 	IMAD.U32.U32 RZ, R1, R10, RZ;
+	/*0238*/     /*0xe000000760000001*/ 	SSY 0x2b8;
+	/*0240*/     /*0xffffdc0450ee0000*/ 	BAR.RED.POPC RZ, RZ;
+	/*0248*/     /*0x08d3dc231b0e0000*/ 	ISETP.GE.AND P1, pt, R13, R2, pt;
+	/*0250*/     /*0x600005e740000001*/ 	@P1 BRA 0x2b0;
+	/*0258*/     /*0x34011de428000000*/ 	MOV R4, R13;
+	/*0260*/     /*0x08415c0348000000*/ 	IADD R5, R4, R2;
+	/*0268*/     /*0x0841de036000c000*/ 	SHL.W R7, R4, 0x2;
+	/*0270*/     /*0x20411c0348004000*/ 	IADD R4, R4, c [0x0] [0x8];
+	/*0278*/     /*0x08515e036000c000*/ 	SHL.W R5, R5, 0x2;
+	/*0280*/     /*0x00719c85c1000000*/ 	LDS R6, [R7];
+	/*0288*/     /*0x0843dc23188e0000*/ 	ISETP.LT.AND P1, pt, R4, R2, pt;
+	/*0290*/     /*0x00515c85c1000000*/ 	LDS R5, [R5];
+	/*0298*/     /*0x14615c0050000000*/ 	FADD R5, R6, R5;
+	/*02a0*/     /*0x00715c85c9000000*/ 	STS [R7], R5;
+	/*02a8*/     /*0xc00005e74003fffe*/ 	@P1 BRA 0x260;
+	/*02b0*/     /*0x0430dc134800c000*/ 	IADD.S R3, R3, 0x1;
+	/*02b8*/     /*0x2833dc231a8ec000*/ 	ISETP.NE.AND P1, pt, R3, 0xa, pt;
+	/*02c0*/     /*0x04209c235800c000*/ 	SHR R2, R2, 0x1;
+	/*02c8*/     /*0x800005e74003fffd*/ 	@P1 BRA 0x230;
+	/*02d0*/     /*0xc000a1e740000000*/ 	@!P0 BRA.U 0x308;
+	/*02d8*/     /*0x800081e428004000*/ 	@P0 MOV R2, c [0x0] [0x20];
+	/*02e0*/     /*0x1000c0e35000c000*/ 	@P0 IMUL.HI R3, R0, 0x4;
+	/*02e8*/     /*0x100100a32005c000*/ 	@P0 IMAD R4.CC, R0, 0x4, R2;
+	/*02f0*/     /*0x03f08085c1000000*/ 	@P0 LDS R2, [0x0];
+	/*02f8*/     /*0x9031404348004000*/ 	@P0 IADD.X R5, R3, c [0x0] [0x24];
+	/*0300*/     /*0x0040808594000000*/ 	@P0 ST.E [R4], R2;
+	/*0308*/     /*0x50001c0348004000*/ 	IADD R0, R0, c [0x0] [0x14];
+	/*0310*/     /*0xe003dc23188e4000*/ 	ISETP.LT.AND P1, pt, R0, c [0x0] [0x38], pt;
+	/*0318*/     /*0x800005e74003fff4*/ 	@P1 BRA 0x40;
+	/*0320*/     /*0x00001de780000000*/ 	EXIT;
+		..........................................
+
+

@@ -1,0 +1,3 @@
+> GPU does not support concurrent kernel execution
+  CUDA kernel runs will be serialized
+> Detected Compute SM 2.0 hardware with 15 multi-processors

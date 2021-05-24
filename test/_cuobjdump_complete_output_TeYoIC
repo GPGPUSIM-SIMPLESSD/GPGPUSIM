@@ -1,0 +1,462 @@
+
+Fatbin ptx code:
+================
+arch = sm_30
+code version = [3,0]
+producer = cuda
+host = linux
+compile_size = 64bit
+identifier = simpleAssert.cu
+
+
+
+
+
+
+.version 3.0
+.target sm_30
+.address_size 64
+
+.file	1 "/tmp/tmpxft_00010fbf_00000000-9_simpleAssert.compute_30.cpp3.i"
+.file	2 "simpleAssert.cu"
+.file	3 "/usr/local/cuda/include/crt/device_runtime.h"
+.extern .func __assertfail
+(
+.param .b64 __assertfail_param_0,
+.param .b64 __assertfail_param_1,
+.param .b32 __assertfail_param_2,
+.param .b64 __assertfail_param_3,
+.param .b64 __assertfail_param_4
+)
+;
+.global .align 1 .b8 __T20[21] = {118, 111, 105, 100, 32, 116, 101, 115, 116, 75, 101, 114, 110, 101, 108, 40, 105, 110, 116, 41, 0};
+.global .align 1 .b8 $str[9] = {103, 116, 105, 100, 32, 60, 32, 78, 0};
+.global .align 1 .b8 $str1[16] = {115, 105, 109, 112, 108, 101, 65, 115, 115, 101, 114, 116, 46, 99, 117, 0};
+
+.entry _Z10testKerneli(
+.param .u32 _Z10testKerneli_param_0
+)
+{
+.reg .pred %p<2>;
+.reg .s32 %r<7>;
+.reg .s64 %rl<5>;
+
+
+ld.param.u32 %r1, [_Z10testKerneli_param_0];
+.loc 2 194 1
+mov.u32 %r2, %ctaid.x;
+mov.u32 %r3, %ntid.x;
+mov.u32 %r4, %tid.x;
+mad.lo.s32 %r5, %r3, %r2, %r4;
+.loc 2 196 1
+setp.lt.s32 %p1, %r5, %r1;
+@%p1 bra BB0_2;
+
+mov.u64 %rl1, $str;
+mov.u64 %rl2, __T20;
+mov.u64 %rl3, $str1;
+mov.u32 %r6, 196;
+mov.u64 %rl4, 1;
+
+	{
+.reg .b32 temp_param_reg;
+.param .b64 param0;
+.loc 3 160 1
+st.param.b64	[param0+0], %rl1;
+.param .b64 param1;
+st.param.b64	[param1+0], %rl3;
+.param .b32 param2;
+st.param.b32	[param2+0], %r6;
+.param .b64 param3;
+st.param.b64	[param3+0], %rl2;
+.param .b64 param4;
+st.param.b64	[param4+0], %rl4;
+call.uni 
+__assertfail, 
+(
+param0, 
+param1, 
+param2, 
+param3, 
+param4
+);
+}
+
+
+BB0_2:
+.loc 2 197 2
+ret;
+}
+
+
+
+Fatbin elf code:
+================
+arch = sm_30
+code version = [1,4]
+producer = cuda
+host = linux
+compile_size = 64bit
+identifier = simpleAssert.cu
+
+.section .strtab	STRTAB
+
+.section .shstrtab	STRTAB
+
+.section .symtab	SYMTAB
+ index           value           size      info    other  shndx    name  
+   0               0               0        0        0      0     (null)
+   1               0               0        3        0      1     .shstrtab
+   2               0               0        3        0      2     .strtab
+   3               0               0        3        0      3     .symtab
+   4               0               0        3        0      8     .nv.global.init
+   5               0               0        3        0      0     
+   6               0             192        3        0      4     .text._Z10testKerneli
+   7               0               0        3        0      6     .nv.info._Z10testKerneli
+   8               0               0        3        0      9     .nv.info
+   9               0               0        3        0      5     .nv.constant0._Z10testKerneli
+  10               0               0        3        0      7     .rel.text._Z10testKerneli
+  11               0             192       12       10      4     _Z10testKerneli
+  12               0               0       12        0      0     __assertfail
+  13               0               9       11        0      8     $str
+  14               9              16       11        0      8     $str1
+  15              25              21       11        0      8     __T20
+
+
+.nv.constant0._Z10testKerneli	PROGBITS
+0x00000000  0x00000000  0x00000000  0x00000000  0x00000000  
+0x00000000  0x00000000  0x00000000  0x00000000  
+0x00000000  0x00000000  0x00000000  0x00000000  
+0x00000000  0x00000000  0x00000000  0x00000000  
+0x00000000  0x00000000  0x00000000  0x00000000  
+0x00000000  0x00000000  0x00000000  0x00000000  
+0x00000000  0x00000000  0x00000000  0x00000000  
+0x00000000  0x00000000  0x00000000  0x00000000  
+0x00000000  0x00000000  0x00000000  0x00000000  
+0x00000000  0x00000000  0x00000000  0x00000000  
+0x00000000  0x00000000  0x00000000  0x00000000  
+0x00000000  0x00000000  0x00000000  0x00000000  
+0x00000000  0x00000000  0x00000000  0x00000000  
+0x00000000  0x00000000  0x00000000  0x00000000  
+0x00000000  0x00000000  0x00000000  0x00000000  
+0x00000000  0x00000000  0x00000000  0x00000000  
+0x00000000  0x00000000  0x00000000  0x00000000  
+0x00000000  0x00000000  0x00000000  0x00000000  
+0x00000000  0x00000000  0x00000000  0x00000000  
+0x00000000  0x00000000  0x00000000  0x00000000  
+
+
+
+.nv.global.init	PROGBITS
+0x64697467  0x4e203c20  0x6d697300  0x41656c70  0x72657373  
+0x75632e74  0x696f7600  0x65742064  0x654b7473  
+0x6c656e72  0x746e6928  29  0 
+
+
+.text._Z10testKerneli	PROGBITS
+bar = 0	reg = 14	lmem=0	smem=0
+0x82823007  0x220002c2  0x10005de4  0x28004001  
+0x94001c04  0x2c000000  0x8400dc04  0x2c000000  
+0xa0001ca3  0x20064000  0x0001dc23  0x188e4005  
+0x000001e7  0x80000000  0x00011de2  0x18000000  
+0x00420047  0x22020042  0x00015de2  0x18000000  
+0x00019de2  0x18000000  0x0001dde2  0x18000000  
+0x10021de2  0x18000003  0x00029de2  0x18000000  
+0x0002dde2  0x18000000  0xfc035de4  0x28000000  
+0x02e2e007  0x20000000  0x04031de2  0x18000000  
+0x00010007  0x10000000  0x00001de7  0x80000000  
+0xe0001de7  0x4003ffff  0x00001de4  0x40000000  
+0x00001de4  0x40000000  0x00001de4  0x40000000  
+
+
+.section .rel.text._Z10testKerneli	REL
+56    $str    R_CUDA_ABS32_LO_26
+72    $str    R_CUDA_ABS32_HI_26
+80    $str1    R_CUDA_ABS32_LO_26
+88    $str1    R_CUDA_ABS32_HI_26
+104    __T20    R_CUDA_ABS32_LO_26
+112    __T20    R_CUDA_ABS32_HI_26
+144    __assertfail    R_CUDA_ABS32_26
+
+
+.nv.info._Z10testKerneli	PROGBITS
+	<0x1>
+	Attribute:	EIATTR_EXTERNS
+	Format:	EIFMT_SVAL
+	Value:	externs:	__assertfail(0xc)	
+	<0x2>
+	Attribute:	EIATTR_PARAM_CBANK
+	Format:	EIFMT_SVAL
+	Value:	0x9 0x40140 
+	<0x3>
+	Attribute:	EIATTR_CBANK_PARAM_SIZE
+	Format:	EIFMT_HVAL
+	Value:	0x4
+	<0x4>
+	Attribute:	EIATTR_KPARAM_INFO
+	Format:	EIFMT_SVAL
+	Value:	Index : 0x0	Ordinal : 0x0	Offset  : 0x0	Size    : 0x4
+		Pointee's logAlignment : 0x0	Space : 0x0	cbank : 0x1f	Parameter Space : CBANK	
+	<0x5>
+	Attribute:	EIATTR_SYNC_STACK
+	Format:	EIFMT_SVAL
+	Value:	0x10010 0x1 
+
+
+.nv.info	PROGBITS
+	<0x1>
+	Attribute:	EIATTR_MIN_STACK_SIZE
+	Format:	EIFMT_SVAL
+	Value:	function: _Z10testKerneli(0xb)	min stack size: 0x0
+	<0x2>
+	Attribute:	EIATTR_FRAME_SIZE
+	Format:	EIFMT_SVAL
+	Value:	function: _Z10testKerneli(0xb)	frame size: 0x0
+
+	code for sm_30
+		Function : _Z10testKerneli
+	/*0008*/     /*0x10005de428004001*/ 	MOV R1, c [0x0] [0x44];
+	/*0010*/     /*0x94001c042c000000*/ 	S2R R0, SR_CTAid_X;
+	/*0018*/     /*0x8400dc042c000000*/ 	S2R R3, SR_Tid_X;
+	/*0020*/     /*0xa0001ca320064000*/ 	IMAD R0, R0, c [0x0] [0x28], R3;
+	/*0028*/     /*0x0001dc23188e4005*/ 	ISETP.LT.AND P0, pt, R0, c [0x0] [0x140], pt;
+	/*0030*/     /*0x000001e780000000*/ 	@P0 EXIT;
+	/*0038*/     /*0x00011de218000000*/ 	MOV32I R4, 0x0;
+	/*0048*/     /*0x00015de218000000*/ 	MOV32I R5, 0x0;
+	/*0050*/     /*0x00019de218000000*/ 	MOV32I R6, 0x0;
+	/*0058*/     /*0x0001dde218000000*/ 	MOV32I R7, 0x0;
+	/*0060*/     /*0x10021de218000003*/ 	MOV32I R8, 0xc4;
+	/*0068*/     /*0x00029de218000000*/ 	MOV32I R10, 0x0;
+	/*0070*/     /*0x0002dde218000000*/ 	MOV32I R11, 0x0;
+	/*0078*/     /*0xfc035de428000000*/ 	MOV R13, RZ;
+	/*0088*/     /*0x04031de218000000*/ 	MOV32I R12, 0x1;
+	/*0090*/     /*0x0001000710000000*/ 	JCAL 0x0;
+	/*0098*/     /*0x00001de780000000*/ 	EXIT;
+	/*00a0*/     /*0xe0001de74003ffff*/ 	BRA 0xa0;
+	/*00a8*/     /*0x00001de440000000*/ 	NOP CC.T;
+	/*00b0*/     /*0x00001de440000000*/ 	NOP CC.T;
+	/*00b8*/     /*0x00001de440000000*/ 	NOP CC.T;
+		................................
+
+
+
+Fatbin ptx code:
+================
+arch = sm_20
+code version = [3,0]
+producer = cuda
+host = linux
+compile_size = 64bit
+identifier = simpleAssert.cu
+
+
+
+
+
+
+.version 3.0
+.target sm_20
+.address_size 64
+
+.file	1 "/tmp/tmpxft_00010fbf_00000000-13_simpleAssert.compute_20.cpp3.i"
+.file	2 "simpleAssert.cu"
+.file	3 "/usr/local/cuda/include/crt/device_runtime.h"
+.extern .func __assertfail
+(
+.param .b64 __assertfail_param_0,
+.param .b64 __assertfail_param_1,
+.param .b32 __assertfail_param_2,
+.param .b64 __assertfail_param_3,
+.param .b64 __assertfail_param_4
+)
+;
+.global .align 1 .b8 __T20[21] = {118, 111, 105, 100, 32, 116, 101, 115, 116, 75, 101, 114, 110, 101, 108, 40, 105, 110, 116, 41, 0};
+.global .align 1 .b8 $str[9] = {103, 116, 105, 100, 32, 60, 32, 78, 0};
+.global .align 1 .b8 $str1[16] = {115, 105, 109, 112, 108, 101, 65, 115, 115, 101, 114, 116, 46, 99, 117, 0};
+
+.entry _Z10testKerneli(
+.param .u32 _Z10testKerneli_param_0
+)
+{
+.reg .pred %p<2>;
+.reg .s32 %r<7>;
+.reg .s64 %rl<5>;
+
+
+ld.param.u32 %r1, [_Z10testKerneli_param_0];
+.loc 2 194 1
+mov.u32 %r2, %ctaid.x;
+mov.u32 %r3, %ntid.x;
+mov.u32 %r4, %tid.x;
+mad.lo.s32 %r5, %r3, %r2, %r4;
+.loc 2 196 1
+setp.lt.s32 %p1, %r5, %r1;
+@%p1 bra BB0_2;
+
+mov.u64 %rl1, $str;
+mov.u64 %rl2, __T20;
+mov.u64 %rl3, $str1;
+mov.u32 %r6, 196;
+mov.u64 %rl4, 1;
+
+	{
+.reg .b32 temp_param_reg;
+.param .b64 param0;
+.loc 3 160 1
+st.param.b64	[param0+0], %rl1;
+.param .b64 param1;
+st.param.b64	[param1+0], %rl3;
+.param .b32 param2;
+st.param.b32	[param2+0], %r6;
+.param .b64 param3;
+st.param.b64	[param3+0], %rl2;
+.param .b64 param4;
+st.param.b64	[param4+0], %rl4;
+call.uni 
+__assertfail, 
+(
+param0, 
+param1, 
+param2, 
+param3, 
+param4
+);
+}
+
+
+BB0_2:
+.loc 2 197 2
+ret;
+}
+
+
+
+Fatbin elf code:
+================
+arch = sm_20
+code version = [1,4]
+producer = cuda
+host = linux
+compile_size = 64bit
+identifier = simpleAssert.cu
+
+.section .strtab	STRTAB
+
+.section .shstrtab	STRTAB
+
+.section .symtab	SYMTAB
+ index           value           size      info    other  shndx    name  
+   0               0               0        0        0      0     (null)
+   1               0               0        3        0      1     .shstrtab
+   2               0               0        3        0      2     .strtab
+   3               0               0        3        0      3     .symtab
+   4               0               0        3        0     10     .nv.global.init
+   5               0               0        3        0      0     
+   6               0             136        3        0      4     .text._Z10testKerneli
+   7               0               0        3        0      6     .nv.info._Z10testKerneli
+   8               0               0        3        0     11     .nv.info
+   9               0               0        3        0      5     .nv.constant0._Z10testKerneli
+  10               0               0        3        0      7     .rel.text._Z10testKerneli
+  11               0               0        3        0      8     .nv.constant14
+  12               0               0        3        0      9     .rel.nv.constant14
+  13               0             136       12       10      4     _Z10testKerneli
+  14               0               0       12        0      0     __assertfail
+  15               0               9       11        0     10     $str
+  16               9              16       11        0     10     $str1
+  17              25              21       11        0     10     __T20
+
+
+.nv.constant0._Z10testKerneli	PROGBITS
+0x00000000  0x00000000  0x00000000  0x00000000  0x00000000  
+0x00000000  0x00000000  0x00000000  0x00000000  
+
+
+
+.nv.constant14	PROGBITS
+0x00000000  0x00000000  0x00000000  0x00000000  0x00000000  
+0x00000000  
+
+.section .rel.nv.constant14	REL
+0    __T20    R_NV_64
+16    $str1    R_NV_64
+8    $str    R_NV_64
+
+
+.nv.global.init	PROGBITS
+0x64697467  0x4e203c20  0x6d697300  0x41656c70  0x72657373  
+0x75632e74  0x696f7600  0x65742064  0x654b7473  
+0x6c656e72  0x746e6928  29  0 
+
+
+.text._Z10testKerneli	PROGBITS
+bar = 0	reg = 14	lmem=0	smem=0
+0x00005de4  0x28004404  0x94001c04  0x2c000000  
+0x84009c04  0x2c000000  0x20001ca3  0x20044000  
+0x8001dc23  0x188e4000  0x000001e7  0x80000000  
+0x30015de4  0x28007800  0x20011de4  0x28007800  
+0x5001dde4  0x28007800  0x40019de4  0x28007800  
+0x10021de2  0x18000003  0x1002dde4  0x28007800  
+0x00029de4  0x28007800  0xfc035de4  0x28000000  
+0x04031de2  0x18000000  0x00010007  0x10000000  
+0x00001de7  0x80000000  
+
+.section .rel.text._Z10testKerneli	REL
+120    __assertfail    R_CUDA_ABS32_26
+
+
+.nv.info._Z10testKerneli	PROGBITS
+	<0x1>
+	Attribute:	EIATTR_EXTERNS
+	Format:	EIFMT_SVAL
+	Value:	externs:	__assertfail(0xe)	
+	<0x2>
+	Attribute:	EIATTR_PARAM_CBANK
+	Format:	EIFMT_SVAL
+	Value:	0x9 0x40020 
+	<0x3>
+	Attribute:	EIATTR_CBANK_PARAM_SIZE
+	Format:	EIFMT_HVAL
+	Value:	0x4
+	<0x4>
+	Attribute:	EIATTR_KPARAM_INFO
+	Format:	EIFMT_SVAL
+	Value:	Index : 0x0	Ordinal : 0x0	Offset  : 0x0	Size    : 0x4
+		Pointee's logAlignment : 0x0	Space : 0x0	cbank : 0x1f	Parameter Space : CBANK	
+	<0x5>
+	Attribute:	EIATTR_SYNC_STACK
+	Format:	EIFMT_SVAL
+	Value:	0x1000c 0x1 
+
+
+.nv.info	PROGBITS
+	<0x1>
+	Attribute:	EIATTR_MIN_STACK_SIZE
+	Format:	EIFMT_SVAL
+	Value:	function: _Z10testKerneli(0xd)	min stack size: 0x0
+	<0x2>
+	Attribute:	EIATTR_FRAME_SIZE
+	Format:	EIFMT_SVAL
+	Value:	function: _Z10testKerneli(0xd)	frame size: 0x0
+
+	code for sm_20
+		Function : _Z10testKerneli
+	/*0000*/     /*0x00005de428004404*/ 	MOV R1, c [0x1] [0x100];
+	/*0008*/     /*0x94001c042c000000*/ 	S2R R0, SR_CTAid_X;
+	/*0010*/     /*0x84009c042c000000*/ 	S2R R2, SR_Tid_X;
+	/*0018*/     /*0x20001ca320044000*/ 	IMAD R0, R0, c [0x0] [0x8], R2;
+	/*0020*/     /*0x8001dc23188e4000*/ 	ISETP.LT.AND P0, pt, R0, c [0x0] [0x20], pt;
+	/*0028*/     /*0x000001e780000000*/ 	@P0 EXIT;
+	/*0030*/     /*0x30015de428007800*/ 	MOV R5, c [0xe] [0xc];
+	/*0038*/     /*0x20011de428007800*/ 	MOV R4, c [0xe] [0x8];
+	/*0040*/     /*0x5001dde428007800*/ 	MOV R7, c [0xe] [0x14];
+	/*0048*/     /*0x40019de428007800*/ 	MOV R6, c [0xe] [0x10];
+	/*0050*/     /*0x10021de218000003*/ 	MOV32I R8, 0xc4;
+	/*0058*/     /*0x1002dde428007800*/ 	MOV R11, c [0xe] [0x4];
+	/*0060*/     /*0x00029de428007800*/ 	MOV R10, c [0xe] [0x0];
+	/*0068*/     /*0xfc035de428000000*/ 	MOV R13, RZ;
+	/*0070*/     /*0x04031de218000000*/ 	MOV32I R12, 0x1;
+	/*0078*/     /*0x0001000710000000*/ 	JCAL 0x0;
+	/*0080*/     /*0x00001de780000000*/ 	EXIT;
+		................................
+
+

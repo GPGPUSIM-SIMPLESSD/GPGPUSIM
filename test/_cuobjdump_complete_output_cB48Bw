@@ -1,0 +1,464 @@
+
+Fatbin elf code:
+================
+arch = sm_10
+code version = [1,2]
+producer = cuda
+host = linux
+compile_size = 64bit
+identifier = asyncAPI.cu
+
+.section .strtab	STRTAB
+
+.section .shstrtab	STRTAB
+
+.section .symtab	SYMTAB
+ index           value           size      info    other  shndx    name  
+   0               0               0        0        0      0     (null)
+   1               0               0        3        0      1     .shstrtab
+   2               0               0        3        0      2     .strtab
+   3               0               0        3        0      3     .symtab
+   4               0               0        3        0      0     
+   5               0               0        3        0      0     
+   6               0              64        3        0      4     .text._Z16increment_kernelPii
+   7               0               0        3        0      5     .nv.info._Z16increment_kernelPii
+   8               0               0        3        0      6     .nv.shared._Z16increment_kernelPii
+   9               0               0       12       10      4     _Z16increment_kernelPii
+
+
+.nv.shared._Z16increment_kernelPii	NOBITS
+   No data to be dumped. 
+
+
+.text._Z16increment_kernelPii	PROGBITS
+bar = 0	reg = 2	lmem=0	smem=28
+0x10004205  0x0023c780  0xa0000005  0x04000780  
+0x60014c01  0x00204780  0x30020001  0xc4100780  
+0x2000c805  0x04200780  0xd00e0201  0x80c00780  
+0x2000cc01  0x04200780  0xd00e0201  0xa0c00781  
+
+
+
+.nv.info._Z16increment_kernelPii	PROGBITS
+	<0x1>
+	Attribute:	EIATTR_SMEM_PARAM_SIZE
+	Format:	EIFMT_HVAL
+	Value:	0xc
+	<0x2>
+	Attribute:	EIATTR_KPARAM_INFO
+	Format:	EIFMT_SVAL
+	Value:	Index : 0x0	Ordinal : 0x1	Offset  : 0x8	Size    : 0x4
+		Pointee's logAlignment : 0x0	Space : 0x0	cbank : 0x1f	Parameter Space : SMEM	
+	<0x3>
+	Attribute:	EIATTR_KPARAM_INFO
+	Format:	EIFMT_SVAL
+	Value:	Index : 0x0	Ordinal : 0x0	Offset  : 0x0	Size    : 0x8
+		Pointee's logAlignment : 0x0	Space : 0x0	cbank : 0x1f	Parameter Space : SMEM	
+
+	code for sm_10
+		Function : _Z16increment_kernelPii
+	/*0000*/     /*0x100042050023c780*/ 	MOV.U16 R0H, g [0x1].U16;
+	/*0008*/     /*0xa000000504000780*/ 	I2I.U32.U16 R1, R0L;
+	/*0010*/     /*0x60014c0100204780*/ 	IMAD.U16 R0, g [0x6].U16, R0H, R1;
+	/*0018*/     /*0x30020001c4100780*/ 	SHL R0, R0, 0x2;
+	/*0020*/     /*0x2000c80504200780*/ 	IADD R1, g [0x4], R0;
+	/*0028*/     /*0xd00e020180c00780*/ 	GLD.U32 R0, global14 [R1];
+	/*0030*/     /*0x2000cc0104200780*/ 	IADD R0, g [0x6], R0;
+	/*0038*/     /*0xd00e0201a0c00781*/ 	GST.U32 global14 [R1], R0;
+		........................................
+
+
+
+Fatbin ptx code:
+================
+arch = sm_10
+code version = [1,4]
+producer = cuda
+host = linux
+compile_size = 64bit
+identifier = asyncAPI.cu
+	.version 1.4
+.target sm_10, map_f64_to_f32
+
+	
+
+
+	
+	
+
+
+	
+	
+	
+	
+	
+	
+	
+
+.file	1	"<command-line>"
+.file	2	"/tmp/tmpxft_000118b3_00000000-10_asyncAPI.compute_10.cudafe2.gpu"
+.file	3	"/usr/lib/gcc/x86_64-linux-gnu/4.4.7/include/stddef.h"
+.file	4	"/usr/local/cuda/include/crt/device_runtime.h"
+.file	5	"/usr/local/cuda/include/host_defines.h"
+.file	6	"/usr/local/cuda/include/builtin_types.h"
+.file	7	"/usr/local/cuda/include/device_types.h"
+.file	8	"/usr/local/cuda/include/driver_types.h"
+.file	9	"/usr/local/cuda/include/surface_types.h"
+.file	10	"/usr/local/cuda/include/texture_types.h"
+.file	11	"/usr/local/cuda/include/vector_types.h"
+.file	12	"/usr/local/cuda/include/device_launch_parameters.h"
+.file	13	"/usr/local/cuda/include/crt/storage_class.h"
+.file	14	"asyncAPI.cu"
+.file	15	"/usr/local/cuda/include/common_functions.h"
+.file	16	"/usr/local/cuda/include/math_functions.h"
+.file	17	"/usr/local/cuda/include/math_constants.h"
+.file	18	"/usr/local/cuda/include/device_functions.h"
+.file	19	"/usr/local/cuda/include/sm_11_atomic_functions.h"
+.file	20	"/usr/local/cuda/include/sm_12_atomic_functions.h"
+.file	21	"/usr/local/cuda/include/sm_13_double_functions.h"
+.file	22	"/usr/local/cuda/include/sm_20_atomic_functions.h"
+.file	23	"/usr/local/cuda/include/sm_20_intrinsics.h"
+.file	24	"/usr/local/cuda/include/sm_30_intrinsics.h"
+.file	25	"/usr/local/cuda/include/surface_functions.h"
+.file	26	"/usr/local/cuda/include/texture_fetch_functions.h"
+.file	27	"/usr/local/cuda/include/math_functions_dbl_ptx1.h"
+
+
+.entry _Z16increment_kernelPii (
+.param .u64 __cudaparm__Z16increment_kernelPii_g_data,
+.param .s32 __cudaparm__Z16increment_kernelPii_inc_value)
+{
+.reg .u16 %rh<4>;
+.reg .u32 %r<8>;
+.reg .u64 %rd<6>;
+.loc	14	165	0
+$LDWbegin__Z16increment_kernelPii:
+.loc	14	168	0
+ld.param.u64 %rd1, [__cudaparm__Z16increment_kernelPii_g_data];
+cvt.u32.u16 %r1, %tid.x;
+mov.u16 %rh1, %ctaid.x;
+mov.u16 %rh2, %ntid.x;
+mul.wide.u16 %r2, %rh1, %rh2;
+add.u32 %r3, %r1, %r2;
+cvt.s64.s32 %rd2, %r3;
+mul.wide.s32 %rd3, %r3, 4;
+add.u64 %rd4, %rd1, %rd3;
+ld.global.s32 %r4, [%rd4+0];
+ld.param.s32 %r5, [__cudaparm__Z16increment_kernelPii_inc_value];
+add.s32 %r6, %r4, %r5;
+st.global.s32 [%rd4+0], %r6;
+.loc	14	169	0
+exit;
+$LDWend__Z16increment_kernelPii:
+} 
+
+
+Fatbin ptx code:
+================
+arch = sm_30
+code version = [3,0]
+producer = cuda
+host = linux
+compile_size = 64bit
+identifier = asyncAPI.cu
+
+
+
+
+
+
+.version 3.0
+.target sm_30
+.address_size 64
+
+.file	1 "/tmp/tmpxft_000118b3_00000000-15_asyncAPI.compute_30.cpp3.i"
+.file	2 "asyncAPI.cu"
+
+.entry _Z16increment_kernelPii(
+.param .u64 _Z16increment_kernelPii_param_0,
+.param .u32 _Z16increment_kernelPii_param_1
+)
+{
+.reg .s32 %r<10>;
+.reg .s64 %rl<5>;
+
+
+ld.param.u64 %rl1, [_Z16increment_kernelPii_param_0];
+ld.param.u32 %r1, [_Z16increment_kernelPii_param_1];
+cvta.to.global.u64 %rl2, %rl1;
+.loc 2 167 1
+mov.u32 %r2, %ntid.x;
+mov.u32 %r3, %ctaid.x;
+mov.u32 %r4, %tid.x;
+mad.lo.s32 %r5, %r2, %r3, %r4;
+.loc 2 168 1
+mul.wide.s32 %rl3, %r5, 4;
+add.s64 %rl4, %rl2, %rl3;
+ld.global.u32 %r6, [%rl4];
+add.s32 %r8, %r6, %r1;
+st.global.u32 [%rl4], %r8;
+.loc 2 169 2
+ret;
+}
+
+
+
+Fatbin elf code:
+================
+arch = sm_30
+code version = [1,4]
+producer = cuda
+host = linux
+compile_size = 64bit
+identifier = asyncAPI.cu
+
+.section .strtab	STRTAB
+
+.section .shstrtab	STRTAB
+
+.section .symtab	SYMTAB
+ index           value           size      info    other  shndx    name  
+   0               0               0        0        0      0     (null)
+   1               0               0        3        0      1     .shstrtab
+   2               0               0        3        0      2     .strtab
+   3               0               0        3        0      3     .symtab
+   4               0               0        3        0      0     
+   5               0               0        3        0      0     
+   6               0             128        3        0      4     .text._Z16increment_kernelPii
+   7               0               0        3        0      7     .nv.info
+   8               0               0        3        0      6     .nv.info._Z16increment_kernelPii
+   9               0               0        3        0      5     .nv.constant0._Z16increment_kernelPii
+  10               0             128       12       10      4     _Z16increment_kernelPii
+
+
+.nv.constant0._Z16increment_kernelPii	PROGBITS
+0x00000000  0x00000000  0x00000000  0x00000000  0x00000000  
+0x00000000  0x00000000  0x00000000  0x00000000  
+0x00000000  0x00000000  0x00000000  0x00000000  
+0x00000000  0x00000000  0x00000000  0x00000000  
+0x00000000  0x00000000  0x00000000  0x00000000  
+0x00000000  0x00000000  0x00000000  0x00000000  
+0x00000000  0x00000000  0x00000000  0x00000000  
+0x00000000  0x00000000  0x00000000  0x00000000  
+0x00000000  0x00000000  0x00000000  0x00000000  
+0x00000000  0x00000000  0x00000000  0x00000000  
+0x00000000  0x00000000  0x00000000  0x00000000  
+0x00000000  0x00000000  0x00000000  0x00000000  
+0x00000000  0x00000000  0x00000000  0x00000000  
+0x00000000  0x00000000  0x00000000  0x00000000  
+0x00000000  0x00000000  0x00000000  0x00000000  
+0x00000000  0x00000000  0x00000000  0x00000000  
+0x00000000  0x00000000  0x00000000  0x00000000  
+0x00000000  0x00000000  0x00000000  0x00000000  
+0x00000000  0x00000000  0x00000000  0x00000000  
+0x00000000  0x00000000  0x00000000  0x00000000  
+0x00000000  0x00000000  
+
+
+.text._Z16increment_kernelPii	PROGBITS
+bar = 0	reg = 5	lmem=0	smem=0
+0x82304007  0x22823282  0x10005de4  0x28004001  
+0x94001c04  0x2c000000  0x00011de4  0x28004005  
+0x8400dc04  0x2c000000  0xa0001ca3  0x20064000  
+0x10009ca3  0x2009c000  0x10001ce3  0x5000c000  
+0x42837287  0x200002e0  0x1000dc43  0x48004005  
+0x00201c85  0x84000000  0x20001c03  0x48004005  
+0x00201c85  0x94000000  0x00001de7  0x80000000  
+0xe0001de7  0x4003ffff  0x00001de4  0x40000000  
+
+
+
+.nv.info._Z16increment_kernelPii	PROGBITS
+	<0x1>
+	Attribute:	EIATTR_PARAM_CBANK
+	Format:	EIFMT_SVAL
+	Value:	0x9 0xc0140 
+	<0x2>
+	Attribute:	EIATTR_CBANK_PARAM_SIZE
+	Format:	EIFMT_HVAL
+	Value:	0xc
+	<0x3>
+	Attribute:	EIATTR_KPARAM_INFO
+	Format:	EIFMT_SVAL
+	Value:	Index : 0x0	Ordinal : 0x1	Offset  : 0x8	Size    : 0x4
+		Pointee's logAlignment : 0x0	Space : 0x0	cbank : 0x1f	Parameter Space : CBANK	
+	<0x4>
+	Attribute:	EIATTR_KPARAM_INFO
+	Format:	EIFMT_SVAL
+	Value:	Index : 0x0	Ordinal : 0x0	Offset  : 0x0	Size    : 0x8
+		Pointee's logAlignment : 0x0	Space : 0x0	cbank : 0x1f	Parameter Space : CBANK	
+
+
+.nv.info	PROGBITS
+	<0x1>
+	Attribute:	EIATTR_MIN_STACK_SIZE
+	Format:	EIFMT_SVAL
+	Value:	function: _Z16increment_kernelPii(0xa)	min stack size: 0x0
+	<0x2>
+	Attribute:	EIATTR_FRAME_SIZE
+	Format:	EIFMT_SVAL
+	Value:	function: _Z16increment_kernelPii(0xa)	frame size: 0x0
+
+	code for sm_30
+		Function : _Z16increment_kernelPii
+	/*0008*/     /*0x10005de428004001*/ 	MOV R1, c [0x0] [0x44];
+	/*0010*/     /*0x94001c042c000000*/ 	S2R R0, SR_CTAid_X;
+	/*0018*/     /*0x00011de428004005*/ 	MOV R4, c [0x0] [0x140];
+	/*0020*/     /*0x8400dc042c000000*/ 	S2R R3, SR_Tid_X;
+	/*0028*/     /*0xa0001ca320064000*/ 	IMAD R0, R0, c [0x0] [0x28], R3;
+	/*0030*/     /*0x10009ca32009c000*/ 	IMAD R2.CC, R0, 0x4, R4;
+	/*0038*/     /*0x10001ce35000c000*/ 	IMUL.HI R0, R0, 0x4;
+	/*0048*/     /*0x1000dc4348004005*/ 	IADD.X R3, R0, c [0x0] [0x144];
+	/*0050*/     /*0x00201c8584000000*/ 	LD.E R0, [R2];
+	/*0058*/     /*0x20001c0348004005*/ 	IADD R0, R0, c [0x0] [0x148];
+	/*0060*/     /*0x00201c8594000000*/ 	ST.E [R2], R0;
+	/*0068*/     /*0x00001de780000000*/ 	EXIT;
+	/*0070*/     /*0xe0001de74003ffff*/ 	BRA 0x70;
+	/*0078*/     /*0x00001de440000000*/ 	NOP CC.T;
+		........................................
+
+
+
+Fatbin ptx code:
+================
+arch = sm_20
+code version = [3,0]
+producer = cuda
+host = linux
+compile_size = 64bit
+identifier = asyncAPI.cu
+
+
+
+
+
+
+.version 3.0
+.target sm_20
+.address_size 64
+
+.file	1 "/tmp/tmpxft_000118b3_00000000-19_asyncAPI.compute_20.cpp3.i"
+.file	2 "asyncAPI.cu"
+
+.entry _Z16increment_kernelPii(
+.param .u64 _Z16increment_kernelPii_param_0,
+.param .u32 _Z16increment_kernelPii_param_1
+)
+{
+.reg .s32 %r<10>;
+.reg .s64 %rl<5>;
+
+
+ld.param.u64 %rl1, [_Z16increment_kernelPii_param_0];
+ld.param.u32 %r1, [_Z16increment_kernelPii_param_1];
+cvta.to.global.u64 %rl2, %rl1;
+.loc 2 167 1
+mov.u32 %r2, %ntid.x;
+mov.u32 %r3, %ctaid.x;
+mov.u32 %r4, %tid.x;
+mad.lo.s32 %r5, %r2, %r3, %r4;
+.loc 2 168 1
+mul.wide.s32 %rl3, %r5, 4;
+add.s64 %rl4, %rl2, %rl3;
+ld.global.u32 %r6, [%rl4];
+add.s32 %r8, %r6, %r1;
+st.global.u32 [%rl4], %r8;
+.loc 2 169 2
+ret;
+}
+
+
+
+Fatbin elf code:
+================
+arch = sm_20
+code version = [1,4]
+producer = cuda
+host = linux
+compile_size = 64bit
+identifier = asyncAPI.cu
+
+.section .strtab	STRTAB
+
+.section .shstrtab	STRTAB
+
+.section .symtab	SYMTAB
+ index           value           size      info    other  shndx    name  
+   0               0               0        0        0      0     (null)
+   1               0               0        3        0      1     .shstrtab
+   2               0               0        3        0      2     .strtab
+   3               0               0        3        0      3     .symtab
+   4               0               0        3        0      0     
+   5               0               0        3        0      0     
+   6               0              96        3        0      4     .text._Z16increment_kernelPii
+   7               0               0        3        0      7     .nv.info
+   8               0               0        3        0      6     .nv.info._Z16increment_kernelPii
+   9               0               0        3        0      5     .nv.constant0._Z16increment_kernelPii
+  10               0              96       12       10      4     _Z16increment_kernelPii
+
+
+.nv.constant0._Z16increment_kernelPii	PROGBITS
+0x00000000  0x00000000  0x00000000  0x00000000  0x00000000  
+0x00000000  0x00000000  0x00000000  0x00000000  
+0x00000000  0x00000000  
+
+
+.text._Z16increment_kernelPii	PROGBITS
+bar = 0	reg = 4	lmem=0	smem=0
+0x00005de4  0x28004404  0x94001c04  0x2c000000  
+0x84009c04  0x2c000000  0x8000dde4  0x28004000  
+0x20001ca3  0x20044000  0x10009ca3  0x2007c000  
+0x10001ce3  0x5000c000  0x9000dc43  0x48004000  
+0x00201c85  0x84000000  0xa0001c03  0x48004000  
+0x00201c85  0x94000000  0x00001de7  0x80000000  
+
+
+
+.nv.info._Z16increment_kernelPii	PROGBITS
+	<0x1>
+	Attribute:	EIATTR_PARAM_CBANK
+	Format:	EIFMT_SVAL
+	Value:	0x9 0xc0020 
+	<0x2>
+	Attribute:	EIATTR_CBANK_PARAM_SIZE
+	Format:	EIFMT_HVAL
+	Value:	0xc
+	<0x3>
+	Attribute:	EIATTR_KPARAM_INFO
+	Format:	EIFMT_SVAL
+	Value:	Index : 0x0	Ordinal : 0x1	Offset  : 0x8	Size    : 0x4
+		Pointee's logAlignment : 0x0	Space : 0x0	cbank : 0x1f	Parameter Space : CBANK	
+	<0x4>
+	Attribute:	EIATTR_KPARAM_INFO
+	Format:	EIFMT_SVAL
+	Value:	Index : 0x0	Ordinal : 0x0	Offset  : 0x0	Size    : 0x8
+		Pointee's logAlignment : 0x0	Space : 0x0	cbank : 0x1f	Parameter Space : CBANK	
+
+
+.nv.info	PROGBITS
+	<0x1>
+	Attribute:	EIATTR_MIN_STACK_SIZE
+	Format:	EIFMT_SVAL
+	Value:	function: _Z16increment_kernelPii(0xa)	min stack size: 0x0
+	<0x2>
+	Attribute:	EIATTR_FRAME_SIZE
+	Format:	EIFMT_SVAL
+	Value:	function: _Z16increment_kernelPii(0xa)	frame size: 0x0
+
+	code for sm_20
+		Function : _Z16increment_kernelPii
+	/*0000*/     /*0x00005de428004404*/ 	MOV R1, c [0x1] [0x100];
+	/*0008*/     /*0x94001c042c000000*/ 	S2R R0, SR_CTAid_X;
+	/*0010*/     /*0x84009c042c000000*/ 	S2R R2, SR_Tid_X;
+	/*0018*/     /*0x8000dde428004000*/ 	MOV R3, c [0x0] [0x20];
+	/*0020*/     /*0x20001ca320044000*/ 	IMAD R0, R0, c [0x0] [0x8], R2;
+	/*0028*/     /*0x10009ca32007c000*/ 	IMAD R2.CC, R0, 0x4, R3;
+	/*0030*/     /*0x10001ce35000c000*/ 	IMUL.HI R0, R0, 0x4;
+	/*0038*/     /*0x9000dc4348004000*/ 	IADD.X R3, R0, c [0x0] [0x24];
+	/*0040*/     /*0x00201c8584000000*/ 	LD.E R0, [R2];
+	/*0048*/     /*0xa0001c0348004000*/ 	IADD R0, R0, c [0x0] [0x28];
+	/*0050*/     /*0x00201c8594000000*/ 	ST.E [R2], R0;
+	/*0058*/     /*0x00001de780000000*/ 	EXIT;
+		........................................
+
+

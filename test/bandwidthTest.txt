@@ -1,0 +1,19 @@
+./bandwidthTest Starting...
+
+Running on...
+
+ Device 0: GPGPU-Sim_vGPGPU-Sim Simulator Version 3.2.2 
+ Quick Mode
+
+ Host to Device Bandwidth, 1 Device(s), Paged memory
+   Transfer Size (Bytes)	Bandwidth(MB/s)
+   33554432			30.1
+
+ Device to Host Bandwidth, 1 Device(s), Paged memory
+   Transfer Size (Bytes)	Bandwidth(MB/s)
+   33554432			39.8
+
+ Device to Device Bandwidth, 1 Device(s)
+   Transfer Size (Bytes)	Bandwidth(MB/s)
+   33554432			40.0
+

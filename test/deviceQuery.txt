@@ -1,0 +1,12 @@
+./deviceQuery Starting...
+
+ CUDA Device Query (Runtime API) version (CUDART static linking)
+
+Found 1 CUDA Capable device(s)
+
+Device 0: "GPGPU-Sim_vGPGPU-Sim Simulator Version 3.2.2 "
+  CUDA Driver Version / Runtime Version          4.2 / 4.2
+  CUDA Capability Major/Minor version number:    2.0
+  Total amount of global memory:                 1024 MBytes (1073741824 bytes)
+  (15) Multiprocessors x ( 32) CUDA Cores/MP:    480 CUDA Cores
+  GPU Clock rate:                                700 MHz (0.70 GHz)
